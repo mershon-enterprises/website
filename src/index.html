@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="mershon-enterprises" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+    <meta http-equiv=content-type content="text/html; charset=utf-8">
+    <meta name=description content="Mershon Enterprises LLC is a technology
+        consulting powerhouse with over 10 years of experience in web
+        application development, industrial applications (SCADA/HMI), systems
+        integration, and technical talent recruiting for all your project
+        needs.">
+    <meta name=keywords content="software, software development, bakersfield,
+        web development, SCADA, mobile applications, apps, programmers,
+        technical, ios, android, developers, recruit, consultant">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+  <body>
+    <div class="container" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p>
+            (c) 2015 <a href="http://mershon.enterprises">Mershon Enterprises LLC</a>.
+            Call us at <a href="tel:+16614269099">(661) 425-9099</a> today!
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
