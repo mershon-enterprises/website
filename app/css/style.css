@@ -346,7 +346,7 @@
         transition: top .15s ease-in-out;
       }
 
-        ul.contact li a
+        ul.contact li i
         {
           display: block;
           position: relative;
@@ -363,19 +363,19 @@
           text-align: center;
         }
 
-          ul.contact li a:before
+          ul.contact li i:before
           {
             color: #f2f5f3;
             font-size: 32px;
             line-height: 48px;
           }
 
-        ul.contact li:hover a.fa-facebook   { background-color: #3C5A98; }
-        ul.contact li:hover a.fa-twitter    { background-color: #2DAAE4; }
-        ul.contact li:hover a.fa-dribbble   { background-color: #C4376B; }
-        ul.contact li:hover a.fa-linkedin   { background-color: #006599; }
-        ul.contact li:hover a.fa-instagram    { background-color: #2E5E86; }
-        ul.contact li:hover a.fa-google-plus  { background-color: #DA2713; }
+        ul.contact li:hover i.fa-facebook   { background-color: #3C5A98; }
+        ul.contact li:hover i.fa-twitter    { background-color: #2DAAE4; }
+        ul.contact li:hover i.fa-dribbble   { background-color: #C4376B; }
+        ul.contact li:hover i.fa-linkedin   { background-color: #006599; }
+        ul.contact li:hover i.fa-instagram    { background-color: #2E5E86; }
+        ul.contact li:hover i.fa-google-plus  { background-color: #DA2713; }
 
         ul.contact li:hover
         {
@@ -398,6 +398,7 @@
         display: inline-block;
         margin: 0 1.5em 0 1.5em;
         top: 0;
+        line-height: 6em;
         -moz-transition: top .15s ease-in-out;
         -webkit-transition: top .15s ease-in-out;
         -o-transition: top .15s ease-in-out;
@@ -410,18 +411,20 @@
           top: -10px;
         }
 
-          ul.special li:hover a
+          ul.special li:hover i
           {
             background: #b9d2ce;
           }
 
-        ul.special a
+        ul.special i
         {
           display: block;
           position: relative;
           background: #c1cac5;
-          width: 12em;
-          height: 12em;
+          width: 150px;
+          height: 150px;
+          font-size: 5em;
+          line-height: 150px;
           border-radius: 6em;
           outline: 0;
           -moz-transition: background-color .2s ease-in-out;
@@ -676,6 +679,24 @@
       .box.page-content
       {
       }
+
+/*********************************************************************************/
+/* Icons                                                                         */
+/*********************************************************************************/
+
+  i {
+    position: relative;
+    text-decoration: none;
+  }
+
+    i:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
 
 /*********************************************************************************/
 /* Sidebar + Content                                                             */
