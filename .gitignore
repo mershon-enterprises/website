@@ -1,8 +1,6 @@
-*.sw*
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
 .DS_Store
-Thumbs.db
-*~
-build/
-bin/
-node_modules/
-vendor/
