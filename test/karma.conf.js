@@ -23,6 +23,7 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/skel/src/skel.js',
       'bower_components/skel-layers/src/skel-layers.js',
+      'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
