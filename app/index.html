@@ -20,8 +20,17 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Views will load here. -->
+    <!-- Header -->
+    <meheader></meheader>
+
+    <!-- Navbar -->
+    <navbar></navbar>
+
+    <!-- Views will load here after route change. -->
     <div ng-view=""></div>
+
+    <!-- Footer -->
+    <mefooter></mefooter>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -49,6 +58,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/directives/navbar.js"></script>
+    <script src="scripts/directives/footer.js"></script>
     <!-- endbuild -->
   </body>
 </html>
