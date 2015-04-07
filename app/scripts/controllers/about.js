@@ -8,6 +8,8 @@
  * Controller for the about page.
  */
 angular.module('websiteApp')
-  .controller('AboutCtrl', function () {
-    console.log('About');
+  .controller('AboutCtrl', function ($rootScope) {
+    $rootScope.routes.home = false;
+    $rootScope.routes.about = true;
+    $rootScope.routes.showcase = false;
   });

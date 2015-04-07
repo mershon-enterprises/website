@@ -8,6 +8,8 @@
  * Controller for the landing home page.
  */
 angular.module('websiteApp')
-  .controller('HomeCtrl', function () {
-    console.log('Home');
+  .controller('HomeCtrl', function ($rootScope) {
+    $rootScope.routes.home = true;
+    $rootScope.routes.about = false;
+    $rootScope.routes.showcase = false;
   });

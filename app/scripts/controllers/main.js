@@ -8,6 +8,10 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('MainCtrl', function () {
-    console.log('Main');
+  .controller('MainCtrl', function ($rootScope) {
+    $rootScope.routes = {
+      'home': false,
+      'about': false,
+      'showcase': false,
+    };
   });

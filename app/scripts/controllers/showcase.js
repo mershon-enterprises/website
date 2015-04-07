@@ -8,6 +8,8 @@
  * Controller for the showcase page.
  */
 angular.module('websiteApp')
-  .controller('ShowcaseCtrl', function () {
-    console.log('Showcase');
+  .controller('ShowcaseCtrl', function ($rootScope) {
+    $rootScope.routes.home = false;
+    $rootScope.routes.about = false;
+    $rootScope.routes.showcase = true;
   });
