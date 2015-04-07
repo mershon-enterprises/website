@@ -17,8 +17,16 @@ angular
       //be visited if the user has no session.
       $routeProvider
         .when('/', {
-          templateUrl: 'views/main.html',
-          controller: 'MainCtrl'
+          templateUrl: 'views/home.html',
+          controller: 'HomeCtrl'
+        })
+        .when('/about', {
+          templateUrl: 'views/about.html',
+          controller: 'AboutCtrl'
+        })
+        .when('/showcase', {
+          templateUrl: 'views/showcase.html',
+          controller: 'ShowcaseCtrl'
         })
         .otherwise({
           redirectTo: '/'
