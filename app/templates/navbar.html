@@ -1,6 +1,8 @@
 <!-- Nav -->
   <nav id="nav" class="skel-layers-fixed">
     <ul>
+      <!-- Gain the "current" class when the routes[key] object is true -->
+      <!-- Clicking on any tab will change the route and the current tab -->
       <li ng-class="{current: routes['home']}"}><a ng-click="changeRoute('home')">Home</a></li>
       <li ng-class="{current: routes['about']}"><a ng-click="changeRoute('about')">Learn More</a></li>
       <li ng-class="{current: routes['showcase']}"><a ng-click="changeRoute('showcase')">Showcase</a></li>

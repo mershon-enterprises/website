@@ -9,6 +9,9 @@
  */
 angular.module('websiteApp')
   .controller('HomeCtrl', function ($scope) {
+
+    //Content to be displayed on mouseover when the user browses the MEC
+    //features on the home page.
     $scope.featureContent = {
       'default' : {
         'header' : 'Developing the Modern Web',
@@ -37,10 +40,12 @@ angular.module('websiteApp')
       }
     };
 
+    //Set the view to the default content.
     $scope.header = $scope.featureContent.default.header;
     $scope.tagline = $scope.featureContent.default.tagline;
     $scope.content = $scope.featureContent.default.content;
 
+    //Change the content displayed on the page based on the current key.
     $scope.changeContent = function(key) {
       $scope.header = $scope.featureContent[key].header;
       $scope.tagline = $scope.featureContent[key].tagline;

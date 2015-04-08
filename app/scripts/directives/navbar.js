@@ -7,6 +7,8 @@ angular.module('websiteApp')
     templateUrl: 'templates/navbar.html',
     controller: function($scope, $location) {
 
+      //Tracks which route we're currently on for the "current" page tab in the
+      //navbar.
       $scope.routes = {
         'home': false,
         'about': false,

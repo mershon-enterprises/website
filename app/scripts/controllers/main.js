@@ -10,6 +10,7 @@
 angular.module('websiteApp')
   .controller('MainCtrl', function ($scope) {
 
+    //Animate the page down to the contact form.
     $scope.scrollToContact = function() {
       $('html, body').animate({scrollTop: $('#footer').offset().top}, 1000);
     };
