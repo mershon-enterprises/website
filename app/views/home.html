@@ -2,19 +2,26 @@
   <div class="12u">
 
     <section class="box highlight">
-      <ul class="special">
-        <li><i class="fa fa-html5"></i><span>Modern Coding Standards</span></li>
-        <li><i class="fa fa-tablet"></i><span>Mobile Ready Templates</span></li>
-        <li><i class="fa fa-lock"></i><span>Security First Designs</span></li>
-        <li><i class="fa fa-cloud"></i><span>Distributed 'Cloud' Solutions</span></li>
+      <ul class="special" ng-mouseleave="changeContent('default')">
+        <li ng-mouseenter="changeContent('modern')">
+          <i class="fa fa-html5"></i><span>Modern Web</span>
+        </li>
+        <li ng-mouseenter="changeContent('mobile')">
+          <i class="fa fa-tablet"></i><span>Mobile Templates</span>
+        </li>
+        <li ng-mouseenter="changeContent('security')">
+          <i class="fa fa-lock"></i><span>Security</span>
+        </li>
+        <li ng-mouseenter="changeContent('cloud')">
+          <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
+        </li>
       </ul>
       <header>
-        <h2>Developing the Modern Web</h2>
-        <p>Customers expect a lot more from their apps. We can provide that.</p>
+        <h2>{{header}}</h2>
+        <p>{{tagline}}</p>
       </header>
       <p>
-        Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis eget mi. Etiam eu<br />
-        ante risus. Aliquam erat volutpat. Aliquam luctus et mattis lectus amet pulvinar. Nam nec turpis consequat.
+        {{content}}
       </p>
     </section>
 
