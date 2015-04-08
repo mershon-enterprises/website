@@ -333,6 +333,11 @@
       cursor: default;
     }
 
+    ul.contact a
+    {
+      text-decoration: none;
+    }
+
       ul.contact li
       {
         position: relative;
