@@ -13,5 +13,6 @@ angular.module('websiteApp')
       'home': false,
       'about': false,
       'showcase': false,
+      'blog': false
     };
   });

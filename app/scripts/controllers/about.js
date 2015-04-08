@@ -12,4 +12,5 @@ angular.module('websiteApp')
     $rootScope.routes.home = false;
     $rootScope.routes.about = true;
     $rootScope.routes.showcase = false;
+    $rootScope.routes.blog = false;
   });

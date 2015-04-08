@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name websiteApp.controller:HomeCtrl
+ * @name websiteApp.controller:BlogCtrl
  * @description
- * # HomeCtrl
+ * # BlogCtrl
  * Controller for the landing home page.
  */
 angular.module('websiteApp')
-  .controller('HomeCtrl', function ($rootScope) {
-    $rootScope.routes.home = true;
+  .controller('BlogCtrl', function ($rootScope) {
+    $rootScope.routes.home = false;
     $rootScope.routes.about = false;
     $rootScope.routes.showcase = false;
-    $rootScope.routes.blog = false;
+    $rootScope.routes.blog = true;
   });
