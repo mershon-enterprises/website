@@ -399,7 +399,6 @@
 
       ul.special li
       {
-        cursor: pointer;
         position: relative;
         display: inline-block;
         margin: 0 1.5em 0 1.5em;
