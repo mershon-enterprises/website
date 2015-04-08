@@ -14,14 +14,37 @@ angular.module('websiteApp')
         'blog': false
       };
 
-        $scope.changeRoute = function(key) {
-          $scope.routes.home = false;
-          $scope.routes.about = false;
-          $scope.routes.showcase = false;
-          $scope.routes.blog = false;
-          $scope.routes[key] = true;
-          $location.path('/'+ key);
-        };
+      //Set current route based on location. Helps tab persist through page
+      //refresh.
+      switch($location.path()){
+        case '/':
+          $scope.routes.home = true;
+          break;
+        case '/about':
+          $scope.routes.about = true;
+          break;
+        case '/showcase':
+          $scope.routes.showcase = true;
+          break;
+        case '/blog':
+          $scope.routes.blog = true;
+          break;
+        default:
+          $scope.routes.home = true;
+          break;
+      }
+
+      //Changes the current route with $location and marks the change in the
+      //routes object. The route set to true will have its navbar tab given
+      //the "current" class.
+      $scope.changeRoute = function(key) {
+        $scope.routes.home = false;
+        $scope.routes.about = false;
+        $scope.routes.showcase = false;
+        $scope.routes.blog = false;
+        $scope.routes[key] = true;
+        $location.path('/'+ key);
+      };
     }
   };
 });
