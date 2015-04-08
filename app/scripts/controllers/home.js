@@ -8,12 +8,7 @@
  * Controller for the landing home page.
  */
 angular.module('websiteApp')
-  .controller('HomeCtrl', function ($scope, $rootScope) {
-    $rootScope.routes.home = true;
-    $rootScope.routes.about = false;
-    $rootScope.routes.showcase = false;
-    $rootScope.routes.blog = false;
-
+  .controller('HomeCtrl', function ($scope) {
     $scope.featureContent = {
       'default' : {
         'header' : 'Developing the Modern Web',

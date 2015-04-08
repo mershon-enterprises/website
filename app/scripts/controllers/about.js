@@ -8,9 +8,5 @@
  * Controller for the about page.
  */
 angular.module('websiteApp')
-  .controller('AboutCtrl', function ($rootScope) {
-    $rootScope.routes.home = false;
-    $rootScope.routes.about = true;
-    $rootScope.routes.showcase = false;
-    $rootScope.routes.blog = false;
+  .controller('AboutCtrl', function () {
   });

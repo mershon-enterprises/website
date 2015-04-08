@@ -8,13 +8,7 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('MainCtrl', function ($scope, $rootScope) {
-    $rootScope.routes = {
-      'home': false,
-      'about': false,
-      'showcase': false,
-      'blog': false
-    };
+  .controller('MainCtrl', function ($scope) {
 
     $scope.scrollToContact = function() {
       $('html, body').animate({scrollTop: $('#footer').offset().top}, 1000);
