@@ -1,95 +1,107 @@
-<div class="row 200%">
-  <div class="12u">
-
-    <section class="box highlight">
-      <ul class="special" ng-mouseleave="changeContent('default')">
-        <li ng-mouseenter="changeContent('modern')">
-          <i class="fa fa-html5"></i><span>Modern Web</span>
-        </li>
-        <li ng-mouseenter="changeContent('mobile')">
-          <i class="fa fa-tablet"></i><span>Mobile Templates</span>
-        </li>
-        <li ng-mouseenter="changeContent('security')">
-          <i class="fa fa-lock"></i><span>Security</span>
-        </li>
-        <li ng-mouseenter="changeContent('cloud')">
-          <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
-        </li>
-      </ul>
-      <header>
-        <h2>{{header}}</h2>
-        <p>{{tagline}}</p>
-      </header>
-      <p>
-        {{content}}
-      </p>
-    </section>
-
-  </div>
+<div id="banner-wrapper">
+  <section id="banner">
+    <h2>Are you ready to start your project?</h2>
+    <a ng-click="scrollToContact()" class="button">Alright let's go</a>
+  </section>
 </div>
 
-<div class="row 200%">
-  <div class="12u">
+<div id="main-wrapper">
+      <div id="main" class="container">
 
-    <section class="box features">
-      <h2 class="major"><span>But why us?</span></h2>
-      <div>
-        <div class="row">
-          <div class="3u">
+    <div class="row 200%">
+      <div class="12u">
 
-              <section class="box feature">
-                <img class="image featured" src="images/pic01.png" alt="" />
-                <h3>We're Earning Trust Every Day</h3>
-                <p>
-                  We want to build lasting healthy relationships with our clients. The best code is written by programmers who understand their clients needs and are invested in their success.
-                </p>
-              </section>
+        <section class="box highlight">
+          <ul class="special" ng-mouseleave="changeContent('default')">
+            <li ng-mouseenter="changeContent('modern')">
+              <i class="fa fa-html5"></i><span>Modern Web</span>
+            </li>
+            <li ng-mouseenter="changeContent('mobile')">
+              <i class="fa fa-tablet"></i><span>Mobile Templates</span>
+            </li>
+            <li ng-mouseenter="changeContent('security')">
+              <i class="fa fa-lock"></i><span>Security</span>
+            </li>
+            <li ng-mouseenter="changeContent('cloud')">
+              <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
+            </li>
+          </ul>
+          <header>
+            <h2>{{header}}</h2>
+            <p>{{tagline}}</p>
+          </header>
+          <p>
+            {{content}}
+          </p>
+        </section>
 
-          </div>
-          <div class="3u">
-
-              <section class="box feature">
-                <img class="image featured" src="images/pic02.png" alt="" />
-                <h3>We Know Our Stuff</h3>
-                <p>
-                  Mershon Enterprises is developer-owned, which means those who are the most knowledgeable about software development are the ones analyzing your unique situation. This means no more promising the moon and apologizing later.
-                </p>
-              </section>
-
-          </div>
-          <div class="3u">
-
-              <section class="box feature">
-                <img class="image featured" src="images/pic03.png" alt="" />
-                <h3>The Best Tool For Every Job</h3>
-                <p>
-                  We use the latest tools and are always looking on the horizon for what could be coming up next. This makes us faster than competitors that are only committed to routine.
-                </p>
-              </section>
-
-          </div>
-          <div class="3u">
-
-              <section class="box feature">
-                <img class="image featured" src="images/pic04.png" alt="" />
-                <h3>A New Kind Of Company</h3>
-                <p>
-                  We want to modernize how software is made. We believe that a highly-communicative, transparent business model with minimal overhead will create a better world for developer and community alike.
-                </p>
-              </section>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="12u">
-            <ul class="actions">
-              <li><a href="#" class="button big">Do Something</a></li>
-              <li><a href="#" class="button alt big">Think About It</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
 
+    <div class="row 200%">
+      <div class="12u">
+
+        <section class="box features">
+          <h2 class="major"><span>But why us?</span></h2>
+          <div>
+            <div class="row">
+              <div class="3u">
+
+                  <section class="box feature">
+                    <img class="image featured" src="images/pic01.png" alt="" />
+                    <h3>We're Earning Trust Every Day</h3>
+                    <p>
+                      We want to build lasting healthy relationships with our clients. The best code is written by programmers who understand their clients needs and are invested in their success.
+                    </p>
+                  </section>
+
+              </div>
+              <div class="3u">
+
+                  <section class="box feature">
+                    <img class="image featured" src="images/pic02.png" alt="" />
+                    <h3>We Know Our Stuff</h3>
+                    <p>
+                      Mershon Enterprises is developer-owned, which means those who are the most knowledgeable about software development are the ones analyzing your unique situation. This means no more promising the moon and apologizing later.
+                    </p>
+                  </section>
+
+              </div>
+              <div class="3u">
+
+                  <section class="box feature">
+                    <img class="image featured" src="images/pic03.png" alt="" />
+                    <h3>The Best Tool For Every Job</h3>
+                    <p>
+                      We use the latest tools and are always looking on the horizon for what could be coming up next. This makes us faster than competitors that are only committed to routine.
+                    </p>
+                  </section>
+
+              </div>
+              <div class="3u">
+
+                  <section class="box feature">
+                    <img class="image featured" src="images/pic04.png" alt="" />
+                    <h3>A New Kind Of Company</h3>
+                    <p>
+                      We want to modernize how software is made. We believe that a highly-communicative, transparent business model with minimal overhead will create a better world for developer and community alike.
+                    </p>
+                  </section>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="12u">
+                <ul class="actions">
+                  <li><a ng-click="scrollToContact()" class="button big">Ready To Start?</a></li>
+                  <li><a ng-href="#/showcase" class="button alt big">Want to see what we've already done?</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
   </div>
 </div>
