@@ -394,6 +394,7 @@
 
       ul.special li
       {
+        cursor: pointer;
         position: relative;
         display: inline-block;
         margin: 0 1.5em 0 1.5em;
@@ -406,6 +407,21 @@
         transition: top .15s ease-in-out;
       }
 
+      ul.special span
+      {
+        display: block;
+        height: 0;
+        position: relative;
+        bottom: 0;
+        font-family: "Open Sans Condensed",sans-serif;
+        opacity: 0;
+        -moz-transition: opacity .15s ease-in-out;
+        -webkit-transition: opacity .15s ease-in-out;
+        -o-transition: opacity .15s ease-in-out;
+        -ms-transition: opacity .15s ease-in-out;
+        transition: opacity .15s ease-in-out;
+      }
+
         ul.special li:hover
         {
           top: -10px;
@@ -414,6 +430,12 @@
           ul.special li:hover i
           {
             background: #b9d2ce;
+          }
+
+          ul.special li:hover span
+          {
+            height: 10px;
+            opacity: 1;
           }
 
         ul.special i
