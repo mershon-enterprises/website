@@ -67,6 +67,11 @@
       display: inline-block;
     }
 
+  h2.right
+  {
+    text-align: right;
+  }
+
   a
   {
     color: #006376;
@@ -520,6 +525,15 @@
         margin-left: 0;
         padding-left: 0;
       }
+
+    ul.technologies li
+    {
+      display: inline-block;
+    }
+
+    div.product ul {
+      vertical-align: top;
+    }
 
     ol
     {
