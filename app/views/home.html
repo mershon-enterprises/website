@@ -26,13 +26,53 @@
               <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
             </li>
           </ul>
-          <header>
-            <h2>{{header}}</h2>
-            <p>{{tagline}}</p>
-          </header>
-          <p>
-            {{content}}
-          </p>
+          <div ng-switch="homeContentState">
+            <div ng-switch-when="default">
+              <header >
+                <h2>Developing the Modern Web</h2>
+                <p>Customers expect perfection from their apps. We can provide that.</p>
+              </header>
+              <p>
+                We are a modern company, prepared for the modern web. Websites aren't just about hosting information and pictures anymore. They're full-on applications that must respond to the user's every touch, gesture and command all while keeping personal information secure and being invincible to virtually any disaster.
+              </p>
+            </div>
+            <div ng-switch-when="modern">
+              <header >
+                <h2>Latest Coding Standards</h2>
+                <p>Don't get sold something out of date</p>
+              </header>
+              <p>
+                Our industry evolves and changes faster than any other. New technologies appear and vanish almost weekly and the complexity of web-development is always growing. We use modern tools and best practices to make code maintainable, ensuring you're never stuck with a mess.              </p>
+            </div>
+            <div ng-switch-when="mobile">
+              <header >
+                <h2>Mobile-Ready Templates</h2>
+                <p>Customers expect perfection from their apps. We can provide that.</p>
+              </header>
+              <p>
+                Customers are free to take the web with them. And now it's common to expect them to see your product on screens as large as a wall and as small as a wristwatch. Your web application should be aware of how it's being seen and adjust, looking perfect on monitors, tablets and mobile phones.
+              </p>
+            </div>
+            <div ng-switch-when="security">
+              <header >
+                <h2>Security-First Design</h2>
+                <p>Don't lose their trust</p>
+              </header>
+              <p>
+                A modern web application needs to know its customers to serve them best. This knowledge is intimate and personal, losing it means losing the customer and we'll do our best to ensure that does not happen. We will even work your existing security infrastructure if you've already invested.
+              </p>
+            </div>
+            <div ng-switch-when="cloud">
+              <header >
+                <h2>Distributed Solutions in the Cloud</h2>
+                <p>Powerful and Everywhere</p>
+              </header>
+              <p>
+                Applications that become part of a customer's life don't just run from one place. They run in tandem with other applications all over the web. Running in the cloud makes your application resilient and prevasive all without the enormous costs of "doing it yourself".
+              </p>
+            </div>
+          </div>
+
         </section>
 
       </div>
