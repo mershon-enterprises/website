@@ -33,10 +33,10 @@ angular.module('websiteApp').factory('GithubService',
       var deferred = $q.defer();
 
       $q.all([
+        githubService.queryUser('kevinmershon'),
         githubService.queryUser('devleorepo'),
         githubService.queryUser('cpascua'),
         githubService.queryUser('bethgrace5'),
-        githubService.queryUser('kevinmershon'),
         githubService.queryUser('teahermit')
       ]).then(
         function(success) {
