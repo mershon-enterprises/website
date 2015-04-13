@@ -8,8 +8,15 @@
  * Controller for the about page.
  */
 angular.module('websiteApp')
-  .controller('AboutCtrl', function ($rootScope, $scope, GithubService) {
+  .controller('AboutCtrl', function ($scope, GithubService) {
 
-    console.log(GithubService.queryUsers());
+    GithubService.queryUsers().then(
+      function(success) {
+        $scope.githubUserInfo = success;
+        console.log(success);
+      },
+      function(error) {
+        console.log(error);
+      });
 
   });

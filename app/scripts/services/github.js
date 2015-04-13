@@ -30,17 +30,24 @@ angular.module('websiteApp').factory('GithubService',
     //Query all users on the team.
     githubService.queryUsers = function () {
 
-      var githubUserInfo = {};
+      var deferred = $q.defer();
 
       $q.all([
-        githubUserInfo.devin = githubService.queryUser('devleorepo'),
-        githubUserInfo.cris = githubService.queryUser('cpascua'),
-        githubUserInfo.beth = githubService.queryUser('bethgrace5'),
-        githubUserInfo.kevin = githubService.queryUser('kevinmershon'),
-        githubUserInfo.aaron = githubService.queryUser('teahermit')
-      ]);
+        githubService.queryUser('devleorepo'),
+        githubService.queryUser('cpascua'),
+        githubService.queryUser('bethgrace5'),
+        githubService.queryUser('kevinmershon'),
+        githubService.queryUser('teahermit')
+      ]).then(
+        function(success) {
+          deferred.resolve(success);
+        },
+        function(error) {
+          deferred.reject(error);
+        }
+      );
 
-      return githubUserInfo;
+      return deferred.promise;
     };
 
     //Get the public user info from the github API using $http based on their
