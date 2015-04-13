@@ -8,7 +8,20 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('MainCtrl', function ($scope, $location) {
+  .controller('MainCtrl', function ($rootScope, $scope, $http, $location) {
+
+    //For any $http requests that involve github's api.
+    $rootScope.githubAPI = 'https://api.github.com';
+
+    //Lock us into the v3 api.
+    $rootScope.githubAPIConfig = {
+      'headers': {
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    };
+
+    //Tell angular to always use that.
+    $http($rootScope.githubAPIConfig);
 
     //Tracks which route we're currently on for the "current" page tab in the
       //navbar.
