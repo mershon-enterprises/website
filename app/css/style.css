@@ -397,6 +397,32 @@
           top: 0;
         }
 
+    ul.contact_info
+    {
+      font-size: 1.5em;
+      text-align: left;
+    }
+
+      ul.contact_info a
+      {
+        color: #0C151E !important;
+        text-decoration: none;
+      }
+
+      ul.contact_info li
+      {
+        height: 4em;
+        padding-left: 2em;
+      }
+
+      ul.contact_info strong
+      {
+        display: inline-block;
+        font-family: "Open Sans Condensed";
+        text-transform: uppercase;
+        min-width: 100px;
+      }
+
     ul.special
     {
       cursor: default;
@@ -566,6 +592,7 @@
         display: block;
         margin: 0;
         font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.5em;
         font-weight: 700;
         text-transform: uppercase;
         color: #6b7770;
