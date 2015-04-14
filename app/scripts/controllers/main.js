@@ -10,6 +10,7 @@
 angular.module('websiteApp')
   .controller('MainCtrl', function ($rootScope, $scope, $http, $location, GithubService) {
 
+    //Tell the github service to prepare for api calls.
     GithubService.setup();
 
     //Tracks which route we're currently on for the "current" page tab in the
@@ -50,6 +51,11 @@ angular.module('websiteApp')
         $scope.routes.blog = false;
         $scope.routes[key] = true;
       };
+
+      //Animate to the top of the page on every route change.
+      $scope.$on('$routeChangeStart', function() {
+        $('html, body').animate({scrollTop: $('body').offset().top}, 500);
+      });
 
     //Animate the page down to the contact form.
     $scope.scrollToContact = function() {
