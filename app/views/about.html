@@ -48,25 +48,46 @@
         <section class="box highlight">
           <ul class="special" ng-mouseleave="changeContent('default')">
             <li>
-              <i class="fa fa-html5"></i><span>Web Development</span>
+              <i ng-click="changeSkill('webdesign')" class="fa fa-html5"></i><span>Web Design</span>
             </li>
             <li>
-              <i class="fa fa-database"></i><span>Relational Databases</span>
+              <i ng-click="changeSkill('databases')" class="fa fa-database"></i><span>Relational Databases</span>
             </li>
             <li>
-              <i class="fa fa-mobile"></i><span>Mobile</span>
+              <i ng-click="changeSkill('mobile')" class="fa fa-mobile"></i><span>Mobile</span>
             </li>
             <li>
-              <i class="fa fa-gears"></i><span>Security & Testing</span>
+              <i ng-click="changeSkill('security')" class="fa fa-gears"></i><span>Security & Testing</span>
             </li>
             <li>
-              <i class="fa fa-server"></i><span>Systems Administraton</span>
+              <i ng-click="changeSkill('serveradmin')" class="fa fa-server"></i><span>Systems Administraton</span>
             </li>
             <li>
-              <i class="fa fa-bar-chart"></i><span>SCADA</span>
+              <i ng-click="changeSkill('scada')" class="fa fa-bar-chart"></i><span>SCADA</span>
             </li>
           </ul>
         </section>
+
+      <div class="skillset" ng-switch="skillMode" class="row %200">
+        <div ng-switch-when="webdesign" class="12u">
+          <p>This is our description about how we can do Web Design.</p>
+        </div>
+        <div ng-switch-when="databases" class="12u">
+          <p>This is our description about how we can do Databases.</p>
+        </div>
+        <div ng-switch-when="mobile" class="12u">
+          <p>This is our description about how we can do Mobile.</p>
+        </div>
+        <div ng-switch-when="security" class="12u">
+          <p>This is our description about how we can do Security.</p>
+        </div>
+        <div ng-switch-when="serveradmin" class="12u">
+          <p>This is our description about how we can do Server Admin.</p>
+        </div>
+        <div ng-switch-when="scada" class="12u">
+          <p>This is our description about how we can do SCADA.</p>
+        </div>
+      </div>
 
       <h2 class="major"><span>Benefits of a Virtual Company</span></h2>
 

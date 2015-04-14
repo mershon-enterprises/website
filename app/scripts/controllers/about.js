@@ -19,4 +19,8 @@ angular.module('websiteApp')
         console.log(error);
       });
 
+    $scope.changeSkill = function(skill) {
+      $scope.skillMode = skill;
+    };
+
   });
