@@ -10,10 +10,19 @@
 angular.module('websiteApp')
   .controller('AboutCtrl', function ($scope, GithubService) {
 
+    //Query for all the github users.
     GithubService.queryUsers().then(
       function(success) {
-        $scope.githubUserInfo = success;
-        console.log(success);
+        //parse them into an ojbect instead of an array.
+        $scope.githubUserInfo = {};
+        $.each(success, function(index, value) {
+          if (value.login) {
+            var tempObject = {};
+            tempObject[value.login] = value;
+            $.extend($scope.githubUserInfo, tempObject);
+          }
+        });
+        console.log($scope.githubUserInfo);
       },
       function(error) {
         console.log(error);
