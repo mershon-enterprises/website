@@ -413,13 +413,15 @@ module.exports = function (grunt) {
                                   //imagemin compresses images in /images
                                   //svgmin compresses .svg files in /images
 
+    'copy:styles',                //Copy css files to the .tmp/styles folder.
+
     'autoprefixer',               //Adds missing browser prefixes to css files.
                                   //leaves newly prefixed files in .tmp/styles
 
     'concat',                     //Concats all javascript and css sourcefiles together.
                                   //scripts.js is made from the app's js files.
                                   //vendor.js is likewise made from dependencies js files.
-                                  //main.css is made from
+                                  //main.css is made from the .tmp/styles/main.css
                                   //vendor.css is likewise made from dependencies css files.
 
     'ngAnnotate',                 //Ensures minification works with Angular expressions.
