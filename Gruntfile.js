@@ -403,23 +403,40 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',                 //Wipes out the tmp and dist folders to start fresh.
+
     'wiredep',                    //Automatically includes dependencies into index.html.
+
     'useminPrepare',              //Generates a configuration file for concat, uglify, and cssmin based on index.html.
                                   // <!-- build:js(.)  --> & <!-- build:css(.) --> comment blocks denote this.
 
     'concurrent:dist',            //Performs tasks concurrently to speed up build time. 'imagemin' and 'svgmin'
+                                  //imagemin compresses images in /images
+                                  //svgmin compresses .svg files in /images
 
+    'autoprefixer',               //Adds missing browser prefixes to css files.
+                                  //leaves newly prefixed files in .tmp/styles
 
-    'autoprefixer',
-    'concat',
-    'ngAnnotate',
-    'copy:dist',
-    'cdnify',
-    'cssmin',
-    'uglify',
-    'filerev',
-    'usemin',
-    'htmlmin'
+    'concat',                     //Concats all javascript and css sourcefiles together.
+                                  //scripts.js is made from the app's js files.
+                                  //vendor.js is likewise made from dependencies js files.
+                                  //main.css is made from
+                                  //vendor.css is likewise made from dependencies css files.
+
+    'ngAnnotate',                 //Ensures minification works with Angular expressions.
+
+    'copy:dist',                  //Copy all files for deployment to the dist folder.
+
+    'cdnify',                     //Rewrites URLs for CDNs so they work properly after deployment.
+
+    'cssmin',                     //Performs custom cssmin not collected during useminPrepare.
+
+    'uglify',                     //Performs custom uglify not collected during useminPrepare.
+
+    'filerev',                    //Renames files in a main.XXXXXX.css format for browser caching.
+
+    'usemin',                     //Performs tasks set during useminPrepare.
+
+    'htmlmin'                     //Minifies all html files.
   ]);
 
   grunt.registerTask('default', [
