@@ -34,7 +34,7 @@ angular.module('websiteApp').factory('GithubService',
 
       $q.all([
         githubService.queryUser('kevinmershon'),
-        githubService.queryUser('devleorepo'),
+        githubService.queryUser('devinleonhart'),
         githubService.queryUser('cpascua'),
         githubService.queryUser('bethgrace5'),
         githubService.queryUser('teahermit')
