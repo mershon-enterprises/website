@@ -351,12 +351,12 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }]
       },
-      styles: {
-        expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
-      }
+    fonts: {
+      expand: true,
+      cwd: 'bower_components/font-awesome/fonts/',
+      dest: '<%= yeoman.dist %>/fonts/',
+      src: '*.*'
+    }
     },
 
     // Run some tasks in parallel to speed up the build process
@@ -416,7 +416,9 @@ module.exports = function (grunt) {
                                   //imagemin compresses images in /images
                                   //svgmin compresses .svg files in /images
 
-    'copy:styles',                //Copy css files to the .tmp/styles folder.
+    'copy:dist',                  //Copy all files for deployment to the dist folder.
+
+    'copy:fonts',                  //Copy all files for deployment to the dist folder.
 
     'autoprefixer',               //Adds missing browser prefixes to css files.
                                   //leaves newly prefixed files in .tmp/styles
@@ -428,8 +430,6 @@ module.exports = function (grunt) {
                                   //vendor.css is likewise made from dependencies css files.
 
     'ngAnnotate',                 //Ensures minification works with Angular expressions.
-
-    'copy:dist',                  //Copy all files for deployment to the dist folder.
 
     'cdnify',                     //Rewrites URLs for CDNs so they work properly after deployment.
 
