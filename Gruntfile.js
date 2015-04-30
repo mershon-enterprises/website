@@ -44,10 +44,6 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
-      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -196,51 +192,6 @@ module.exports = function (grunt) {
               }
             }
           }
-      },
-      sass: {
-        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /(\.\.\/){1,2}bower_components\//
-      }
-    },
-
-    // Compiles Sass to CSS and generates necessary files if requested
-    compass: {
-      options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: './bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
-        relativeAssets: false,
-        assetCacheBuster: false,
-        raw: 'Sass::Script::Number.precision = 10\n'
-      },
-      dist: {
-        options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        }
-      },
-      server: {
-        options: {
-          sourcemap: true
-        }
-      }
-    },
-
-    // Renames files for browser caching purposes
-    filerev: {
-      dist: {
-        src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
-          '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/styles/fonts/*'
-        ]
       }
     },
 
@@ -263,7 +214,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Performs rewrites based on filerev and the useminPrepare configuration
+    // Performs rewrites based on the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
@@ -280,15 +231,18 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/style.css': '<%= yeoman.dist %>/styles/style.css',
+          '<%= yeoman.dist %>/styles/style-mobile.css': '<%= yeoman.dist %>/styles/style-mobile.css',
+          '<%= yeoman.dist %>/styles/style-desktop.css': '<%= yeoman.dist %>/styles/style-desktop.css',
+          '<%= yeoman.dist %>/styles/style-1000px.css': '<%= yeoman.dist %>/styles/style-1000px.css',
+          '<%= yeoman.dist %>/styles/ie/v8.css': '<%= yeoman.dist %>/styles/ie/v8.css',
+        }
+      }
+    },
+
     // uglify: {
     //   dist: {
     //     files: {
@@ -374,9 +328,10 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'templates/{,*/}*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -385,24 +340,17 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }]
       },
-      styles: {
-        expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
-      }
+    fonts: {
+      expand: true,
+      cwd: 'bower_components/font-awesome/fonts/',
+      dest: '<%= yeoman.dist %>/fonts/',
+      src: '*.*'
+    }
     },
 
     // Run some tasks in parallel to speed up the build process
     concurrent: {
-      server: [
-        'compass:server'
-      ],
-      test: [
-        'compass'
-      ],
       dist: [
-        'compass:dist',
         'imagemin',
         'svgmin'
       ]
@@ -426,7 +374,6 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
-      'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
       'watch'
@@ -441,27 +388,47 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
-    'concurrent:test',
     'autoprefixer',
     'connect:test',
     'karma'
   ]);
 
   grunt.registerTask('build', [
-    'clean:dist',
-    'wiredep',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'ngAnnotate',
-    'copy:dist',
-    'cdnify',
-    'cssmin',
-    'uglify',
-    'filerev',
-    'usemin',
-    'htmlmin'
+    'clean:dist',                 //Wipes out the tmp and dist folders to start fresh.
+
+    'wiredep',                    //Automatically includes dependencies into index.html.
+
+    'useminPrepare',              //Generates a configuration file for concat, uglify, and cssmin based on index.html.
+                                  // <!-- build:js(.)  --> & <!-- build:css(.) --> comment blocks denote this.
+
+    'concurrent:dist',            //Performs tasks concurrently to speed up build time. 'imagemin' and 'svgmin'
+                                  //imagemin compresses images in /images
+                                  //svgmin compresses .svg files in /images
+
+    'copy:dist',                  //Copy all files for deployment to the dist folder.
+
+    'copy:fonts',                  //Copy all files for deployment to the dist folder.
+
+    'autoprefixer',               //Adds missing browser prefixes to css files.
+                                  //leaves newly prefixed files in .tmp/styles
+
+    'concat',                     //Concats all javascript and css sourcefiles together.
+                                  //scripts.js is made from the app's js files.
+                                  //vendor.js is likewise made from dependencies js files.
+                                  //main.css is made from the .tmp/styles/main.css
+                                  //vendor.css is likewise made from dependencies css files.
+
+    'ngAnnotate',                 //Ensures minification works with Angular expressions.
+
+    'cdnify',                     //Rewrites URLs for CDNs so they work properly after deployment.
+
+    'cssmin',                     //Performs custom cssmin not collected during useminPrepare.
+
+    'uglify',                     //Performs custom uglify not collected during useminPrepare.
+
+    'usemin',                     //Performs tasks set during useminPrepare.
+
+    'htmlmin'                     //Minifies all html files.
   ]);
 
   grunt.registerTask('default', [
