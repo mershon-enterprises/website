@@ -1,8 +1,20 @@
-*.sw*
-.DS_Store
+# OS Garbage
 Thumbs.db
-*~
-build/
-bin/
-node_modules/
-vendor/
+.DS_Store
+
+# Node Development files
+node_modules
+bower_components
+dist
+.tmp
+.sass-cache
+bin
+build
+vendor
+
+# Ctags tags
+.tags
+
+# Vim swapfiles
+*.swp
+*.swo
