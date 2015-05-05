@@ -29,10 +29,6 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
@@ -164,34 +160,10 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
+          cwd: '<%= yeoman.dist %>/styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: '<%= yeoman.dist %>/styles/'
         }]
-      }
-    },
-
-    // Automatically inject Bower components into the app
-    wiredep: {
-      app: {
-        src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
-      },
-      test: {
-        devDependencies: true,
-        src: '<%= karma.unit.configFile %>',
-        ignorePath:  /\.\.\//,
-        fileTypes:{
-          js: {
-            block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-              detect: {
-                js: /'(.*\.js)'/gi
-              },
-              replace: {
-                js: '\'{{filePath}}\','
-              }
-            }
-          }
       }
     },
 
@@ -243,18 +215,18 @@ module.exports = function (grunt) {
       }
     },
 
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    uglify: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/bower_components/skel/src/skel.js': '<%= yeoman.dist %>/bower_components/skel/src/skel.js',
+          '<%= yeoman.dist %>/bower_components/skel-layers/src/skel-layers.js': '<%= yeoman.dist %>/bower_components/skel-layers/src/skel-layers.js',
+          '<%= yeoman.dist %>/bower_components/angular-route/angular-route.js': '<%= yeoman.dist %>/bower_components/angular-route/angular-route.js',
+        }
+      }
+    },
+    concat: {
+      dist: {}
+    },
 
     imagemin: {
       dist: {
@@ -316,6 +288,19 @@ module.exports = function (grunt) {
       }
     },
 
+    bowercopy: {
+      options: {
+                destPrefix: '<%= yeoman.dist %>/bower_components'
+            },
+        dist: {
+            files: {
+                'skel/src/skel.js': 'skel/src/skel.js',
+                'skel-layers/src/skel-layers.js': 'skel-layers/src/skel-layers.js',
+                'angular-route/angular-route.js': 'angular-route/angular-route.js'
+            }
+        }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -373,7 +358,6 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'autoprefixer:server',
       'connect:livereload',
       'watch'
@@ -387,7 +371,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'wiredep',
     'autoprefixer',
     'connect:test',
     'karma'
@@ -395,8 +378,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',                 //Wipes out the tmp and dist folders to start fresh.
-
-    'wiredep',                    //Automatically includes dependencies into index.html.
 
     'useminPrepare',              //Generates a configuration file for concat, uglify, and cssmin based on index.html.
                                   // <!-- build:js(.)  --> & <!-- build:css(.) --> comment blocks denote this.
@@ -407,14 +388,15 @@ module.exports = function (grunt) {
 
     'copy:dist',                  //Copy all files for deployment to the dist folder.
 
-    'copy:fonts',                  //Copy all files for deployment to the dist folder.
+    'bowercopy:dist',
+
+    'copy:fonts',                 //Copy all files for deployment to the dist folder.
 
     'autoprefixer',               //Adds missing browser prefixes to css files.
                                   //leaves newly prefixed files in .tmp/styles
 
     'concat',                     //Concats all javascript and css sourcefiles together.
                                   //scripts.js is made from the app's js files.
-                                  //vendor.js is likewise made from dependencies js files.
                                   //main.css is made from the .tmp/styles/main.css
                                   //vendor.css is likewise made from dependencies css files.
 

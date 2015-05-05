@@ -11,14 +11,15 @@
       web development, SCADA, mobile applications, apps, programmers,
       technical, ios, android, developers, recruit, consultant">
     <meta name="viewport" content="width=device-width">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
     <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-    <!-- endbower -->
     <!-- endbuild -->
+
   </head>
-  <body ng-app="websiteApp" ng-controller="MainCtrl" class="homepage">
+  <body style="display:none;" ng-app="websiteApp" ng-controller="MainCtrl" class="homepage">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -55,15 +56,15 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
+    <!-- CDNify dependencies go here. -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+
+
     <script src="bower_components/skel/src/skel.js"></script>
     <script src="bower_components/skel-layers/src/skel-layers.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/init.js"></script>
