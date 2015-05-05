@@ -396,8 +396,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',                 //Wipes out the tmp and dist folders to start fresh.
 
-    'wiredep',                    //Automatically includes dependencies into index.html.
-
     'useminPrepare',              //Generates a configuration file for concat, uglify, and cssmin based on index.html.
                                   // <!-- build:js(.)  --> & <!-- build:css(.) --> comment blocks denote this.
 
