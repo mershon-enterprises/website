@@ -13,20 +13,20 @@
 
         <section class="box highlight">
           <ul class="special" ng-mouseleave="changeContent('default')">
-            <li ng-mouseenter="changeContent('modern')">
-              <i class="fa fa-html5"></i><span>Modern Web</span>
+            <li  ng-mouseenter="changeContent('modern')">
+              <i ng-click="scrollToDescription()" class="fa fa-html5"></i><span>Modern Web</span>
             </li>
-            <li ng-mouseenter="changeContent('mobile')">
+            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('mobile')">
               <i class="fa fa-tablet"></i><span>Mobile First</span>
             </li>
-            <li ng-mouseenter="changeContent('security')">
+            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('security')">
               <i class="fa fa-lock"></i><span>Security Conscious</span>
             </li>
-            <li ng-mouseenter="changeContent('cloud')">
+            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('cloud')">
               <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
             </li>
           </ul>
-          <div ng-switch="homeContentState">
+          <div class="highlight-description" ng-switch="homeContentState">
             <div ng-switch-when="default">
               <header >
                 <h2>What's in a Modern Web-Application?</h2>
@@ -40,7 +40,7 @@
                 and be built from the ground up with your needs in mind.
               </p>
             </div>
-            <div ng-switch-when="modern">
+            <div class="highlight-description" ng-switch-when="modern">
               <header >
                 <h2>Following the Standards of the Software Industry</h2>
                 <p>Don't pay for outdated technology</p>
@@ -54,7 +54,7 @@
                 can't maintain without us.
               </p>
             </div>
-            <div ng-switch-when="mobile">
+            <div class="highlight-description" ng-switch-when="mobile">
               <header >
                 <h2>Mobile First Technologies</h2>
                 <p>Your app needs to be mobile. We can make it so.</p>
@@ -66,7 +66,7 @@
                 "work computer" by investing in mobile-first application design.
               </p>
             </div>
-            <div ng-switch-when="security">
+            <div class="highlight-description" ng-switch-when="security">
               <header >
                 <h2>Security-Conscious Design</h2>
                 <p>Don't end up a statistic.</p>
@@ -81,7 +81,7 @@
                 infrastructure.
               </p>
             </div>
-            <div ng-switch-when="cloud">
+            <div class="highlight-description" ng-switch-when="cloud">
               <header >
                 <h2>Cloud Solutions, Down to Earth</h2>
                 <p>We do cloud solutions the right way.</p>
