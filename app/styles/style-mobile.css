@@ -87,21 +87,15 @@
           top: 0;
         }
 
-        ul.special a
-        {
-          width: 8em;
-          height: 8em;
-          border-radius: 4.75em;
-        }
-
-          ul.special a:before
-          {
-            font-size: 48px;
-          }
-
       ul.special li span
       {
         opacity: 1;
+      }
+
+      ul.special i {
+        height: 125px !important;
+        width: 125px !important;
+        line-height: 125px !important;
       }
 
     ul.contact
