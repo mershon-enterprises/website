@@ -58,9 +58,9 @@ angular.module('websiteApp')
       $('html, body').animate({scrollTop: $('#footer').offset().top}, 1000);
     };
 
-    //Animate to the top of the page on every route change.
+    //Animate to the top of the main content container on every route change.
     $scope.$on('$routeChangeStart', function() {
-      $('html, body').animate({scrollTop: $('body').offset().top}, 500);
+      $('html, body').animate({scrollTop: $('#main-wrapper').offset().top});
     });
 
     $scope.$on('$routeChangeSuccess', function() {
