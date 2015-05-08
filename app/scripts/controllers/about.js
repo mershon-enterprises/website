@@ -22,7 +22,6 @@ angular.module('websiteApp')
             $.extend($scope.githubUserInfo, tempObject);
           }
         });
-        console.log($scope.githubUserInfo);
       },
       function(error) {
         console.log(error);

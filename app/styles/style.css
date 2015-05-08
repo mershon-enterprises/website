@@ -234,7 +234,7 @@
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: none;
-      background: #b1ddab;
+      background: #008799;
       color: #fff;
       border: 0;
       line-height: 1em;
@@ -253,7 +253,7 @@
       input[type="reset"]:hover,
       .button:hover
       {
-        background: #c1edbb;
+        background: #329fad;
       }
 
       input[type="button"]:active,
@@ -804,7 +804,7 @@
   #main-wrapper
   {
     background: #fff;
-    border-top: solid 5px #b1ddab;
+    border-top: solid 5px #008799;
     border-bottom: solid 5px #c1cac5;
   }
 

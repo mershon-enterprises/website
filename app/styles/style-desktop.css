@@ -83,11 +83,6 @@
       {
       }
 
-        .box.highlight .special
-        {
-          margin: 0 0 4em 0;
-        }
-
         .box.highlight h2
         {
           font-size: 3em;
@@ -355,7 +350,7 @@
 
         #nav li.current a
         {
-          background: #b1ddab;
+          background: #008799;
           color: #fff;
         }
 
