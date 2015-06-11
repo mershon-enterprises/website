@@ -69,13 +69,13 @@ if(isset($_POST['email'])) {
     }
 
 
-    $email_message .= "Name: ".clean_string($anme)."\n";
+    $email_message .= "Name: ".clean_string($name)."\n";
 
     $email_message .= "Company: ".clean_string($company)."\n";
 
     $email_message .= "Email: ".clean_string($email_from)."\n";
 
-    $email_message .= "Message: ".clean_string($Message)."\n";
+    $email_message .= "Message: ".clean_string($message)."\n";
 
 $headers = 'From: '.$email_from."\r\n".
 
