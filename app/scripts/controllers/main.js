@@ -59,8 +59,24 @@ angular.module('websiteApp')
     };
 
     //Animate to the top of the main content container on every route change.
+    window.firstRoute = true;
     $scope.$on('$routeChangeStart', function() {
-      $('html, body').animate({scrollTop: $('#main-wrapper').offset().top});
+      // don't scroll on first page load
+      if (window.firstRoute === true) {
+        window.firstRoute = false;
+        return;
+      }
+      var scrollToTop = function() {
+        var mw = $('#main-wrapper').offset();
+        if (mw !== undefined) {
+          $('html, body').animate({scrollTop: mw.top});
+        } else {
+          // wait 50ms and try again
+          setTimeout(scrollToTop, 50);
+        }
+      }
+
+      scrollToTop();
     });
 
     $scope.$on('$routeChangeSuccess', function() {
