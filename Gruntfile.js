@@ -316,7 +316,8 @@ module.exports = function (grunt) {
             'templates/{,*/}*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/{,*/}*.*'
+            'styles/{,*/}*.*',
+            'scripts/php/{,*/}*.*'
           ]
         }, {
           expand: true,
