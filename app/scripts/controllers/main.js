@@ -79,6 +79,11 @@ angular.module('websiteApp')
       scrollToTop();
     });
 
+    $scope.contactUs = function() {
+
+    };
+
+
     $scope.$on('$routeChangeSuccess', function() {
       $scope.changeCurrentTab();
     });
