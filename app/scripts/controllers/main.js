@@ -79,10 +79,26 @@ angular.module('websiteApp')
       scrollToTop();
     });
 
+    $scope.contactInfo = {};
+
     $scope.contactUs = function() {
+      $.ajax({
+        method: 'POST',
+        url: 'scripts/php/contact.php',
+        data: { name: $scope.contactInfo.name,
+                company: $scope.contactInfo.company,
+                email: $scope.contactInfo.email,
+                message: $scope.contactInfo.message
+              }
+      })
+        .done(function( msg ) {
+          alert('Thank you for contacting us!');
+        })
+        .fail(function() {
+          alert( "Mail failed to send..." );
+        });
 
     };
-
 
     $scope.$on('$routeChangeSuccess', function() {
       $scope.changeCurrentTab();
