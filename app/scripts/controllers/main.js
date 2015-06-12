@@ -91,13 +91,12 @@ angular.module('websiteApp')
                 message: $scope.contactInfo.message
               }
       })
-        .done(function( msg ) {
-          alert('Thank you for contacting us!');
+        .done(function() {
+          swal('Thank you for contacting us!', 'We\'ll get back to you as soon as possible!', 'success');
         })
         .fail(function() {
-          alert( "Mail failed to send..." );
+          swal('Uh oh! The mail didn\'t send.', 'We\'ll get it fixed as soon as possible!', 'error');
         });
-
     };
 
     $scope.$on('$routeChangeSuccess', function() {
