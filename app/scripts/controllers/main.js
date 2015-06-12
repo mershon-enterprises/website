@@ -74,7 +74,7 @@ angular.module('websiteApp')
           // wait 50ms and try again
           setTimeout(scrollToTop, 50);
         }
-      }
+      };
 
       scrollToTop();
     });
