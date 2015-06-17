@@ -296,7 +296,8 @@ module.exports = function (grunt) {
             files: {
                 'skel/src/skel.js': 'skel/src/skel.js',
                 'skel-layers/src/skel-layers.js': 'skel-layers/src/skel-layers.js',
-                'angular-route/angular-route.js': 'angular-route/angular-route.js'
+                'angular-route/angular-route.js': 'angular-route/angular-route.js',
+                'sweetalert/dist/sweetalert.min.js': 'sweetalert/dist/sweetalert.min.js'
             }
         }
     },
