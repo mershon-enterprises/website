@@ -91,7 +91,7 @@
       <div class="12u">
 
         <section class="box highlight">
-          <ul class="special" ng-mouseleave="changeContent('default')">
+          <ul class="special">
             <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('south-valley-dietetics')">
               <img src="images/south-valley-demo.png"><span>South Valley Dietetics</span>
             </li>
@@ -100,15 +100,6 @@
             </li>
           </ul>
           <div class="highlight-description" ng-switch="showcaseContentState">
-            <div ng-switch-when="default">
-              <header >
-                <h2>Default Header</h2>
-                <p>Default Sub-header</p>
-              </header>
-              <p>
-                DEFAULT!
-              </p>
-            </div>
             <div class="highlight-description" ng-switch-when="south-valley-dietetics">
               <header >
                 <h2>South Valley Dietetics</h2>
