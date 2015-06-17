@@ -21,3 +21,6 @@ vendor
 
 # Scripts
 *.sh
+
+# Tarballs
+*.tar.gz
