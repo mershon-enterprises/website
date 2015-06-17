@@ -18,3 +18,9 @@ vendor
 # Vim swapfiles
 *.swp
 *.swo
+
+# Scripts
+*.sh
+
+# Tarballs
+*.tar.gz
