@@ -474,6 +474,15 @@
             opacity: 1;
           }
 
+        ul.special img
+        {
+          width: 300px;
+          border: solid 3px #c1cac5;
+          border-radius: 25px;
+          -webkit-border-radius: 25px;
+          -moz-border-radius: 25px;
+        }
+
         ul.special i
         {
           display: block;

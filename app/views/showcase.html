@@ -88,27 +88,61 @@
       </div>
     </div>
 
-    <a name="south-valley-dietetics"></a>
+    <a name="clients"></a>
     <header>
-      <h2 class="major"><span>South Valley Dietetics</span></h2>
+      <h2 class="major"><span>Clients</span></h2>
     </header>
 
-    <h2 class="right">Industry Association Website</h2>
     <div class="row 200%">
-      <div class="5u">
-        <img class="image featured" src="images/south-valley-demo.png">
-        <ul class="technologies">
-          <li><img title="HTML5" class="image" src="images/html5-icon.png"></li>
-          <li><img title="Grails" class="image" src="images/grails-icon.png"></li>
-        </ul>
-      </div>
-      <div class="7u">
-        <p>South Valley Dietetics is an organization for dietitians located in
-          the southern region of the San Joaquin Valley. Kevin Mershon has been
-          maintaining their online presence on their behalf for many years.</p>
+      <div class="12u">
+
+        <section class="box highlight">
+          <ul class="special">
+            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('south-valley-dietetics')">
+              <img src="images/south-valley-demo.png"><span>South Valley Dietetics</span>
+            </li>
+            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('exclusive-technologies')">
+              <img src="images/exclusive-techs-demo.png"><span>Exclusive Technologies</span>
+            </li>
+          </ul>
+          <div class="highlight-description" ng-switch="showcaseContentState">
+            <div class="highlight-description" ng-switch-when="south-valley-dietetics">
+              <header >
+                <h2>South Valley Dietetics</h2>
+                <p>Industry Association Website</p>
+              </header>
+              <p>
+                South Valley Dietetics is an organization for dietitians located
+                in the southern region of the San Joaquin Valley. Kevin Mershon
+                has been maintaining their online presence on their behalf for
+                many years.
+              </p>
+              <ul class="technologies">
+                <li><img title="HTML5" class="image" src="images/html5-icon.png"></li>
+                <li><img title="Grails" class="image" src="images/grails-icon.png"></li>
+              </ul>
+            </div>
+            <div class="highlight-description" ng-switch-when="exclusive-technologies">
+              <header >
+                <h2>Exclusive Technologies</h2>
+                <p>IT Services Website</p>
+              </header>
+              <p>
+                Exclusive Technologies provies IT services to businesses in the
+                Bakersfield area. Designed using AngularJS routing and the HTML5
+                Up Halcyonic template.
+              </p>
+              <ul class="technologies">
+                <li><img title="HTML5" class="image" src="images/html5-icon.png"></li>
+                <li><img title="AngularJS" class="image" src="images/angular-icon.png"></li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
       </div>
     </div>
-
 
     <div class="row">
       <div class="12u">
