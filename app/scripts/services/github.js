@@ -37,8 +37,7 @@ angular.module('websiteApp').factory('GithubService',
         githubService.queryUser('devinleonhart'),
         githubService.queryUser('cpascua'),
         githubService.queryUser('bethgrace5'),
-        githubService.queryUser('aaronpflaumer'),
-        githubService.queryUser('dch86')
+        githubService.queryUser('aaronpflaumer')
       ]).then(
         function(success) {
           deferred.resolve(success);
@@ -73,7 +72,3 @@ angular.module('websiteApp').factory('GithubService',
 
     return githubService;
 });
-
-
-
-

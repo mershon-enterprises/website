@@ -59,9 +59,45 @@ angular.module('websiteApp')
     };
 
     //Animate to the top of the main content container on every route change.
+    window.firstRoute = true;
     $scope.$on('$routeChangeStart', function() {
-      $('html, body').animate({scrollTop: $('#main-wrapper').offset().top});
+      // don't scroll on first page load
+      if (window.firstRoute === true) {
+        window.firstRoute = false;
+        return;
+      }
+      var scrollToTop = function() {
+        var mw = $('#main-wrapper').offset();
+        if (mw !== undefined) {
+          $('html, body').animate({scrollTop: mw.top});
+        } else {
+          // wait 50ms and try again
+          setTimeout(scrollToTop, 50);
+        }
+      };
+
+      scrollToTop();
     });
+
+    $scope.contactInfo = {};
+
+    $scope.contactUs = function() {
+      $.ajax({
+        method: 'POST',
+        url: 'scripts/php/contact.php',
+        data: { name: $scope.contactInfo.name,
+                company: $scope.contactInfo.company,
+                email: $scope.contactInfo.email,
+                message: $scope.contactInfo.message
+              }
+      })
+        .done(function() {
+          swal('Thank you for contacting us!', 'We\'ll get back to you as soon as possible!', 'success');
+        })
+        .fail(function() {
+          swal('Uh oh! The mail didn\'t send.', 'We\'ll get it fixed as soon as possible!', 'error');
+        });
+    };
 
     $scope.$on('$routeChangeSuccess', function() {
       $scope.changeCurrentTab();

@@ -8,26 +8,26 @@
     </div>
     <div class="7u">
 
-        <form>
+        <form ng-submit="contactUs()">
 
           <div>
             <label for="name">Name</label>
-            <input name="name" type="text" /><br>
+            <input ng-model="contactInfo.name" name="name" type="text" /><br>
           </div>
 
           <div>
             <label for="company">Company</label>
-            <input name="company" type="text" /><br>
+            <input ng-model="contactInfo.company" name="company" type="text" /><br>
           </div>
 
           <div>
             <label for="email">E-Mail</label>
-            <input name="email" type="email" /><br>
+            <input ng-model="contactInfo.email" name="email" type="email" /><br>
           </div>
 
           <div>
             <label for="message">Message</label>
-            <textarea name="message" /><br>
+            <textarea ng-model="contactInfo.message" name="message" /><br>
           </div>
 
           <div>
