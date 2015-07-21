@@ -4,8 +4,7 @@
   "dependencies": {
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.3",
-    "skel": "n33/skel.old#~2.2.1",
-    "skel-layers": "fabfuel/skel-layers#~2.0.2",
+    "skel-old": "=2.2.1",
     "sweetalert": "~1.0.1",
     "angular": "~1.3",
     "angular-route": "~1.3"

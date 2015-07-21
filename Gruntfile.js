@@ -15,11 +15,33 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-string-replace');
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
   };
+
+  var cdncustom = (function() {
+    var cdn = require('google-cdn-data');
+
+    cdn['skel-old'] = {
+      versions: ['2.2.1'],
+      url: function (version) {
+        return '//cdnjs.cloudflare.com/ajax/libs/skel/' + version + '/skel.min.js';
+      }
+    };
+
+    cdn['sweetalert'] = {
+      versions: ['1.0.1'],
+      url: function (version) {
+        return '//cdnjs.cloudflare.com/ajax/libs/sweetalert/' + version + '/sweetalert.min.js';
+      }
+    };
+
+    return cdn;
+  })();
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -177,7 +199,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
+              js: ['concat'],
               css: ['cssmin']
             },
             post: {}
@@ -215,15 +237,6 @@ module.exports = function (grunt) {
       }
     },
 
-    uglify: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/bower_components/skel/src/skel.js': '<%= yeoman.dist %>/bower_components/skel/src/skel.js',
-          '<%= yeoman.dist %>/bower_components/skel-layers/src/skel-layers.js': '<%= yeoman.dist %>/bower_components/skel-layers/src/skel-layers.js',
-          '<%= yeoman.dist %>/bower_components/angular-route/angular-route.js': '<%= yeoman.dist %>/bower_components/angular-route/angular-route.js',
-        }
-      }
-    },
     concat: {
       dist: {}
     },
@@ -283,23 +296,34 @@ module.exports = function (grunt) {
 
     // Replace Google CDN references
     cdnify: {
+      options: {
+        cdn: cdncustom
+      },
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
 
-    bowercopy: {
-      options: {
-                destPrefix: '<%= yeoman.dist %>/bower_components'
-            },
-        dist: {
-            files: {
-                'skel/src/skel.js': 'skel/src/skel.js',
-                'skel-layers/src/skel-layers.js': 'skel-layers/src/skel-layers.js',
-                'angular-route/angular-route.js': 'angular-route/angular-route.js',
-                'sweetalert/dist/sweetalert.min.js': 'sweetalert/dist/sweetalert.min.js'
+    'string-replace': {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/': '<%= yeoman.dist %>/*.html'
+        },
+        options: {
+          replacements: [
+            {
+              pattern: 'bower_components/skel-old/src/skel-layers.js',
+              replacement: '//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.0.2/skel-layers.min.js'
+            }, {
+              pattern: 'bower_components/font-awesome/css/font-awesome.css',
+              replacement: '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css'
+            }, {
+              pattern: 'bower_components/sweetalert/dist/sweetalert.css',
+              replacement: '//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.0.1/sweetalert.min.css'
             }
+          ]
         }
+      }
     },
 
     // Copies remaining files to places other tasks can use
@@ -390,8 +414,6 @@ module.exports = function (grunt) {
 
     'copy:dist',                  //Copy all files for deployment to the dist folder.
 
-    'bowercopy:dist',
-
     'copy:fonts',                 //Copy all files for deployment to the dist folder.
 
     'autoprefixer',               //Adds missing browser prefixes to css files.
@@ -406,9 +428,9 @@ module.exports = function (grunt) {
 
     'cdnify',                     //Rewrites URLs for CDNs so they work properly after deployment.
 
-    'cssmin',                     //Performs custom cssmin not collected during useminPrepare.
+    'string-replace',             //Rewrites URLs that don't get caught with cdnify
 
-    'uglify',                     //Performs custom uglify not collected during useminPrepare.
+    'cssmin',                     //Performs custom cssmin not collected during useminPrepare.
 
     'usemin',                     //Performs tasks set during useminPrepare.
 
