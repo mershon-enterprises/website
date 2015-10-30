@@ -18,7 +18,7 @@ angular.module('websiteApp')
     $scope.routes = {
       'home': false,
       'about': false,
-      'showcase': false,
+      'consulting': false,
       'blog': false
     };
 
@@ -29,7 +29,7 @@ angular.module('websiteApp')
       $scope.routes = {
         'home': false,
         'about': false,
-        'showcase': false,
+        'consulting': false,
         'blog': false
       };
 
@@ -41,8 +41,8 @@ angular.module('websiteApp')
         case '/about':
           $scope.routes.about = true;
           break;
-        case '/showcase':
-          $scope.routes.showcase = true;
+        case '/consulting':
+          $scope.routes.consulting = true;
           break;
         case '/blog':
           $scope.routes.blog = true;
@@ -57,27 +57,6 @@ angular.module('websiteApp')
     $scope.scrollToContact = function() {
       $('html, body').animate({scrollTop: $('#footer').offset().top}, 1000);
     };
-
-    //Animate to the top of the main content container on every route change.
-    window.firstRoute = true;
-    $scope.$on('$routeChangeStart', function() {
-      // don't scroll on first page load
-      if (window.firstRoute === true) {
-        window.firstRoute = false;
-        return;
-      }
-      var scrollToTop = function() {
-        var mw = $('#main-wrapper').offset();
-        if (mw !== undefined) {
-          $('html, body').animate({scrollTop: mw.top});
-        } else {
-          // wait 50ms and try again
-          setTimeout(scrollToTop, 50);
-        }
-      };
-
-      scrollToTop();
-    });
 
     $scope.contactInfo = {};
 
