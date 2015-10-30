@@ -10,7 +10,7 @@
 angular.module('websiteApp')
   .controller('ConsultingCtrl', function ($scope) {
 
-    $scope.consultingContentState =  'default';
+    $scope.consultingContentState = 'default';
 
     //Change the content displayed on the page based on the current key.
     $scope.changeContent = function(key) {

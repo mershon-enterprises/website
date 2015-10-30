@@ -18,26 +18,26 @@
 
         <section class="box highlight">
           <ul class="special">
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('south-valley-dietetics')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('south-valley-dietetics')">
               <img src="images/consulting/south-valley-demo.png"><span>South Valley Dietetics</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('bako-well-testing')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('bako-well-testing')">
               <img src="images/consulting/bako-well-testing-hydra-demo.png"><span>A Bakersfield Well Testing Company</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('exclusive-technologies')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('exclusive-technologies')">
               <img src="images/consulting/exclusive-techs-demo.png"><span>Exclusive Technologies</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('ampcognition')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('ampcognition')">
               <img src="images/consulting/ampcognition-demo.png"><span>AMPCognition and NetSuite</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('evperks')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('evperks')">
               <img src="images/consulting/evperks-demo.png"><span>EVPerks</span>
             </li>
           </ul>
 
-          <div class="highlight-description" ng-switch="showcaseContentState">
+          <div class="highlight-description" ng-switch="consultingContentState">
 
-            <div class="highlight-description" ng-switch-when="south-valley-dietetics">
+            <div ng-switch-when="south-valley-dietetics">
               <header>
                 <h2>South Valley Dietetics</h2>
                 <p>Industry Association Website</p>
@@ -55,7 +55,7 @@
               </ul>
             </div>
 
-            <div class="highlight-description" ng-switch-when="bako-well-testing">
+            <div ng-switch-when="bako-well-testing">
               <header>
                 <h2>A Bakersfield Well Testing Company</h2>
                 <p></p>
@@ -75,7 +75,7 @@
               </ul>
             </div>
 
-            <div class="highlight-description" ng-switch-when="exclusive-technologies">
+            <div ng-switch-when="exclusive-technologies">
               <header>
                 <h2>Exclusive Technologies</h2>
                 <p>IT Services</p>
@@ -90,7 +90,7 @@
               </ul>
             </div>
 
-            <div class="highlight-description" ng-switch-when="ampcognition">
+            <div ng-switch-when="ampcognition">
               <header>
                 <h2>AMPCognition and NetSuite</h2>
                 <p>Entity Resource Planning</p>
@@ -109,7 +109,7 @@
               </ul>
             </div>
 
-            <div class="highlight-description" ng-switch-when="evperks">
+            <div ng-switch-when="evperks">
               <header>
                 <h2>EVPerks</h2>
                 <p>Incentives Platform for Drivers of Electric Vehicles</p>

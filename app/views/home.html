@@ -14,18 +14,18 @@
     <div class="row 200%">
       <div class="12u">
 
-        <section class="box highlight">
-          <ul class="special" ng-mouseleave="changeContent('default')">
-            <li  ng-mouseenter="changeContent('modern')">
+        <section class="box highlight" ng-mouseleave="changeContent('default')">
+          <ul class="special">
+            <li ng-mousedown="changeContent('modern')">
               <i ng-click="scrollToDescription()" class="fa fa-html5"></i><span>Modern Web</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('mobile')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('mobile')">
               <i class="fa fa-tablet"></i><span>Mobile First</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('security')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('security')">
               <i class="fa fa-lock"></i><span>Security Conscious</span>
             </li>
-            <li ng-click="scrollToDescription()" ng-mouseenter="changeContent('cloud')">
+            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('cloud')">
               <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
             </li>
           </ul>
