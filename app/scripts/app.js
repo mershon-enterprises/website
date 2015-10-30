@@ -28,6 +28,18 @@ angular
           templateUrl: 'views/consulting.html',
           controller: 'ConsultingCtrl'
         })
+        .when('/products', {
+          templateUrl: 'views/products.html',
+          controller: 'ProductsCtrl'
+        })
+        .when('/product_hydra', {
+          templateUrl: 'views/product_hydra.html',
+          controller: 'ProductHydraCtrl'
+        })
+        .when('/product_whhero', {
+          templateUrl: 'views/product_whhero.html',
+          controller: 'ProductWHHeroCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });

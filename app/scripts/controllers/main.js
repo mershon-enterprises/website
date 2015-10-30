@@ -18,7 +18,8 @@ angular.module('websiteApp')
     $scope.routes = {
       'home': false,
       'about': false,
-      'consulting': false
+      'consulting': false,
+      'products': false
     };
 
     //The route set to true will have its navbar tab given
@@ -28,7 +29,8 @@ angular.module('websiteApp')
       $scope.routes = {
         'home': false,
         'about': false,
-        'consulting': false
+        'consulting': false,
+        'products': false
       };
 
       //Set current route based on location.
@@ -41,6 +43,9 @@ angular.module('websiteApp')
           break;
         case '/consulting':
           $scope.routes.consulting = true;
+          break;
+        case '/products':
+          $scope.routes.products = true;
           break;
         default:
           $scope.routes.home = true;
