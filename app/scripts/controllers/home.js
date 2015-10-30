@@ -17,8 +17,12 @@ angular.module('websiteApp')
       $scope.homeContentState = key;
     };
 
+    $scope.scrollToFeatures = function() {
+      $('html, body').animate({scrollTop: $('ul.special').offset().top - 150}, 500);
+    };
+
     $scope.scrollToDescription = function() {
-      $('html, body').animate({scrollTop: $('.highlight-description').offset().top - 50}, 500);
+      $('html, body').animate({scrollTop: $('.highlight-description').offset().top - 150}, 500);
     };
 
     $('html, body').animate({scrollTop: 0}, 500);
