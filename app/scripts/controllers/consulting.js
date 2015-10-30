@@ -18,7 +18,7 @@ angular.module('websiteApp')
     };
 
     $scope.scrollToDescription = function() {
-      $('html, body').animate({scrollTop: $('.highlight-description').offset().top - 50}, 500);
+      $('html, body').animate({scrollTop: $('.highlight-description').offset().top - 150}, 500);
     };
 
     $('html, body').animate({scrollTop: 0}, 500);

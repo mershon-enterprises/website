@@ -18,17 +18,21 @@
 
         <section class="box highlight" ng-mouseleave="changeContent('default')">
           <ul class="special">
-            <li ng-mousedown="changeContent('modern')">
-              <i ng-click="scrollToDescription()" class="fa fa-html5"></i><span>Modern Web</span>
+            <li ng-click="changeContent('modern'); scrollToDescription()">
+              <i class="fa fa-html5"></i>
+              <div>Modern Web</div>
             </li>
-            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('mobile')">
-              <i class="fa fa-tablet"></i><span>Mobile First</span>
+            <li ng-click="changeContent('mobile'); scrollToDescription()">
+              <i class="fa fa-tablet"></i>
+              <div>Mobile First</div>
             </li>
-            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('security')">
-              <i class="fa fa-lock"></i><span>Security Conscious</span>
+            <li ng-click="changeContent('security'); scrollToDescription()">
+              <i class="fa fa-lock"></i>
+              <div>Security Conscious</div>
             </li>
-            <li ng-click="scrollToDescription()" ng-mousedown="changeContent('cloud')">
-              <i class="fa fa-cloud"></i><span>Cloud Solutions</span>
+            <li ng-click="changeContent('cloud'); scrollToDescription()">
+              <i class="fa fa-cloud"></i>
+              <div>Cloud Solutions</div>
             </li>
           </ul>
           <div class="highlight-description" ng-switch="homeContentState">
