@@ -8,10 +8,7 @@
  * Controller of the websiteApp
  */
 angular.module('websiteApp')
-  .controller('MainCtrl', function ($rootScope, $scope, $http, $location, GithubService) {
-
-    //Tell the github service to prepare for api calls.
-    GithubService.setup();
+  .controller('MainCtrl', function ($rootScope, $scope, $http, $location) {
 
     //Tracks which route we're currently on for the "current" page tab in the
     //navbar.
