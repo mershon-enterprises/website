@@ -31,4 +31,5 @@ angular.module('websiteApp')
       $scope.skillMode = skill;
     };
 
+    $('html, body').animate({scrollTop: 0}, 500);
   });
