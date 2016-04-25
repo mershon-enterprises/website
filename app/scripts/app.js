@@ -36,6 +36,10 @@ angular
           templateUrl: 'views/product_hydra.html',
           controller: 'ProductHydraCtrl'
         })
+        .when('/product_kernlearn', {
+          templateUrl: 'views/product_kernlearn.html',
+          controller: 'ProductKernLearnCtrl'
+        })
         .when('/product_whhero', {
           templateUrl: 'views/product_whhero.html',
           controller: 'ProductWHHeroCtrl'

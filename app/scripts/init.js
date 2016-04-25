@@ -37,7 +37,7 @@
           side: 'top',
           height: 44,
           width: '100%',
-          html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span><span class="title" data-action="copyHTML" data-args="logo"></span>'
+          html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span><span class="title" data-action="copyHTML" data-args="logo"><a href="tel:+16614259099" style="color: white;">CALL: (661) 425-9099</a></span>'
         }
       }
     }
