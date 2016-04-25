@@ -48,6 +48,10 @@ angular
           templateUrl: 'views/product_whhero.html',
           controller: 'ProductWHHeroCtrl'
         })
+        .when('/support_training', {
+          templateUrl: 'views/support_training.html',
+          controller: 'SupportTrainingCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });

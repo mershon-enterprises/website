@@ -4,9 +4,12 @@
       Howdy!
     </h2>
     <h3>
-      We make software that works everywhere you work
+      We make software that works <span style="color: gold; text-decoration: underline;">everywhere</span> you work
     </h3>
-    <a ng-click="scrollToContact()" class="button">I need software that works!</a>
+    <a ng-click="scrollToContact()" class="button" style="background-color:
+      white"><i class="fa fa-comment"></i> I need software that <span
+        style="color: limegreen; text-decoration: underline;">works</span>!</a>
+
   </section>
 </div>
 
@@ -38,7 +41,8 @@
           <div class="highlight-description" ng-switch="homeContentState">
             <div ng-switch-when="default">
               <header >
-                <h2>What goes into making software that works?</h2>
+                <h2>What goes into making software that <span
+                    style="text-decoration: underline;">works</span>?</h2>
                 <p>You need stability, portability, security, and performance.</p>
               </header>
               <p>
@@ -172,8 +176,10 @@
             <div class="row">
               <div class="12u">
                 <ul class="actions">
-                  <li><a ng-click="scrollToContact()" class="button big">Start your project today</a></li>
-                  <li><a ng-href="#/consulting" class="button big">See who we've helped</a></li>
+                  <li><a ng-click="scrollToContact()" class="button big"><i
+                      class="fa fa-thumbs-up"></i> Start your project today</a></li>
+                  <li><a ng-href="#/consulting" class="button big"><i class="fa
+                      fa-users"></i> See who we've helped</a></li>
                 </ul>
               </div>
             </div>
