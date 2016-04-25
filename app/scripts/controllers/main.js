@@ -25,8 +25,9 @@ angular.module('websiteApp')
 
       $scope.routes = {
         'home': false,
-        'about': false,
+        'company': false,
         'consulting': false,
+        'pricing': false,
         'products': false
       };
 
@@ -35,14 +36,20 @@ angular.module('websiteApp')
         case '/':
           $scope.routes.home = true;
           break;
-        case '/about':
-          $scope.routes.about = true;
+        case '/company':
+          $scope.routes.company = true;
           break;
         case '/consulting':
           $scope.routes.consulting = true;
           break;
+        case '/product_hydra':
+        case '/product_kernlearn':
+        case '/product_whhero':
         case '/products':
           $scope.routes.products = true;
+          break;
+        case '/pricing':
+          $scope.routes.pricing = true;
           break;
         default:
           $scope.routes.home = true;

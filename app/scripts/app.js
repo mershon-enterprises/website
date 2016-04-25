@@ -20,13 +20,17 @@ angular
           templateUrl: 'views/home.html',
           controller: 'HomeCtrl'
         })
-        .when('/about', {
-          templateUrl: 'views/about.html',
-          controller: 'AboutCtrl'
+        .when('/company', {
+          templateUrl: 'views/company.html',
+          controller: 'CompanyCtrl'
         })
         .when('/consulting', {
           templateUrl: 'views/consulting.html',
           controller: 'ConsultingCtrl'
+        })
+        .when('/pricing', {
+          templateUrl: 'views/pricing.html',
+          controller: 'PricingCtrl'
         })
         .when('/products', {
           templateUrl: 'views/products.html',
