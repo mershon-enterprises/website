@@ -241,17 +241,6 @@ module.exports = function (grunt) {
       dist: {}
     },
 
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '**/{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
-
     svgmin: {
       dist: {
         files: [{
@@ -338,6 +327,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'images/{,*/}*.*',
             'templates/{,*/}*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
@@ -362,7 +352,6 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       dist: [
-        'imagemin',
         'svgmin'
       ]
     },
