@@ -343,16 +343,6 @@
         #nav li.active a,
         #nav li.active span
         {
-          background: #C1CAC5;
-          color: #fff;
-        }
-
-      #nav li.current
-      {
-      }
-
-        #nav li.current a
-        {
           background: #008799;
           color: #fff;
         }
