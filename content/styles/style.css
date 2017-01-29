@@ -803,7 +803,7 @@
   #banner-wrapper
   {
     position: relative;
-    background-image:     url('../images/overlay.png'),  url('../images/overlay.png'),  url('../images/banner.jpg');
+    background-image:     url('../images/overlay.png'),  url('../images/overlay.png'),  url('../images/banners/laptop.jpg');
     background-position:    top left,         top left,         center center;
     background-repeat:      repeat,           repeat,           no-repeat;
     background-size:      auto,           auto,           cover;
@@ -894,7 +894,7 @@
       #banner .button:hover
       {
         color: #e4e7e5;
-        border-color: rgba(87, 93, 89, 0.75);
+        border-color: rgba(255, 255, 255, 0.75);
       }
 
       #banner .button:active
