@@ -301,6 +301,10 @@
         padding-left: 0.5em;
       }
 
+    ul.menu {
+      list-style: none;
+    }
+
     ul.divided
     {
     }
@@ -427,6 +431,7 @@
     ul.special
     {
       cursor: default;
+      padding-left: 0;
     }
 
       ul.special li
@@ -488,10 +493,10 @@
           display: block;
           position: relative;
           background: #c1cac5;
-          width: 150px;
-          height: 150px;
+          width: 110px;
+          height: 110px;
           font-size: 5em;
-          line-height: 150px;
+          line-height: 110px;
           border-radius: 6em;
           outline: 0;
           -moz-transition: background-color .2s ease-in-out;
@@ -547,20 +552,6 @@
         margin-right: 0.5em;
       }
 
-    ul.menu li
-    {
-      border-left: solid 1px #E7EAE8;
-      display: inline-block;
-      padding: 0 0 0 0.75em;
-      margin: 0 0 0 0.75em;
-    }
-
-      ul.menu li:first-child
-      {
-        border-left: 0;
-        margin-left: 0;
-        padding-left: 0;
-      }
 
     ul.technologies li
     {

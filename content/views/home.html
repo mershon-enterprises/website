@@ -20,32 +20,34 @@
 
     <div class="row">
       <div class="col-xs-12">
-
-        <section class="box highlight" ng-mouseleave="changeContent('default')">
+        <section class="box highlight">
+          <header>
+            <h2>Our expertise</h2>
+          </header>
           <ul class="special">
-            <li ng-click="changeContent('modern'); scrollToDescription()">
+            <li>
               <i class="fa fa-html5"></i>
-              <div>Modern Web</div>
+              <div>Web Applications</div>
             </li>
-            <li ng-click="changeContent('mobile'); scrollToDescription()">
+            <li>
               <i class="fa fa-tablet"></i>
-              <div>Mobile First</div>
+              <div>Mobile Apps</div>
             </li>
-            <li ng-click="changeContent('security'); scrollToDescription()">
-              <i class="fa fa-lock"></i>
-              <div>Security Conscious</div>
+            <li>
+              <i class="fa fa-cogs"></i>
+              <div>Automation</div>
             </li>
-            <li ng-click="changeContent('cloud'); scrollToDescription()">
-              <i class="fa fa-cloud"></i>
-              <div>Cloud Solutions</div>
+            <li>
+              <i class="fa fa-building-o"></i>
+              <div>ERP and CRMs</div>
             </li>
           </ul>
-          <div class="highlight-description" ng-switch="homeContentState">
-            <div ng-switch-when="default">
-              <header >
-                <h2>What goes into making software that <span
-                    style="text-decoration: underline;">works</span>?</h2>
-                <p>You need stability, portability, security, and performance.</p>
+          <div class="highlight-description">
+            <div>
+              <header>
+                <h2>We make software that <span
+                    style="color: limegreen; text-decoration: underline;">works</span>.</h2>
+                <p>Performance. Security. Portable. Stability.</p>
               </header>
               <p>
                 We are a modern company, born from the modern web. The
@@ -56,10 +58,10 @@
                 in mind.
               </p>
             </div>
-            <div class="highlight-description" ng-switch-when="modern">
-              <header >
-                <h2>Following the Standards of the Software Industry</h2>
-                <p>Don't pay for outdated technology</p>
+            <div class="highlight-description">
+              <header>
+                <h2>We follow Industry Standards.</h2>
+                <p>Build for today, build for tomorrow.</p>
               </header>
               <p>
                 Our industry evolves and changes faster than any other. New
@@ -72,29 +74,28 @@
                 you can't maintain.
               </p>
             </div>
-            <div class="highlight-description" ng-switch-when="mobile">
-              <header >
-                <h2>Mobile First Technologies</h2>
-                <p>Your app needs to be mobile. We can make it so.</p>
+            <div class="highlight-description">
+              <header>
+                <h2>We build for the modern internet.</h2>
+                <p>You're always on the go, and we can make it so.</p>
               </header>
               <p>
                 You're probably using your smartphone to visit us now. Your
                 personal apps go with you everywhere that you do. Why shouldn't
                 your business apps, too? Free yourself from the confines of the
                 "work computer" by investing in mobile-first application design.
-                Local industry leaders AERA and Wonderful (formerly Paramount
-                Farms) both publicly speak in support of mobile computing as the
-                future of industry, and we agree.
+                Local industry leaders AERA and Wonderful both publicly speak in
+                support of mobile computing as the future of industry. We agree.
               </p>
             </div>
-            <div class="highlight-description" ng-switch-when="security">
+            <div class="highlight-description">
               <header >
                 <h2>Security-Conscious Design</h2>
-                <p>Don't end up a statistic.</p>
+                <p>It's better to be safe than a statistic.</p>
               </header>
               <p>
                 Are you up-to-date with the latest security practices and
-                patches that are available? Probably not. It's our job to keep
+                patches that are available? We are. It's our job to keep
                 up-to-date on the latest security policies set by industry
                 leaders, and you reap the benefits. Anything we build you will
                 be designed with security in mind from the first design
@@ -103,20 +104,20 @@
                 rollout.
               </p>
             </div>
-            <div class="highlight-description" ng-switch-when="cloud">
+            <div class="highlight-description">
               <header >
                 <h2>Cloud Solutions, Down to Earth</h2>
-                <p>We do cloud solutions the Bakersfield way. Don't fear the cloud.</p>
+                <p>Cloud scalability, Edge portability</p>
               </header>
               <p>
                 Cloud services can offer scalability and resilience you can't
                 get from running your own servers, but having servers in the
                 cloud shouldn't mean you must always be connected. We build
-                software that makes your data available to you on-the-go, while
-                still utilizing the power of the cloud to prevent data loss and
-                downtime. And if your company's needs cannot be met with cloud
-                hosting, then we will happily work with you to create
-                self-hosted solutions as well.
+                software with Edge-computing in mind, which makes your data
+                available to you on-the-go, while still utilizing the power of
+                the cloud to prevent data loss and downtime. And if your
+                company's needs cannot be met with cloud hosting, then we will
+                happily work with you to create self-hosted solutions as well.
               </p>
             </div>
           </div>
@@ -134,53 +135,46 @@
           <div>
             <div class="row">
               <div class="col-xs-4">
-
-                  <section class="box feature">
-                    <img class="image featured" src="images/pic03.png" alt="" />
-                    <h3>A Bakersfield Software Company</h3>
-                    <p>
-                      We embody what it is to be a Bakersfield company. We
-                      meet you face-to-face, we aren't afraid to get our hands
-                      dirty, we're hard working, and we're dedicated to building
-                      our local community.
-                    </p>
-                  </section>
-
+                <section class="box feature">
+                  <img class="image featured" src="images/thumbs/map-find-us.png" alt="" />
+                  <h3>A Bakersfield Software Company</h3>
+                  <p>We are local to Bakersfield, right in the finance
+                  district at <a
+                  href="https://www.google.com/maps/place/900+Mohawk+St,+Bakersfield,+CA+93309/@35.3626561,-119.0645272,17z/data=!3m1!4b1!4m5!3m4!1s0x80ea421dcb88df11:0x85fee317dd5a66b5!8m2!3d35.3626561!4d-119.0623385"
+                  target="_blank">900 Mohawk, Suite #210</a>. Come to us, or
+                  we'll come to you.</p>
+                </section>
               </div>
               <div class="col-xs-4">
-
                   <section class="box feature">
-                    <img class="image featured" src="images/pic02.png" alt="" />
-                    <h3>That Adapts To Your Needs</h3>
-                    <p>
-                      Technologies come and go. Our expertise is learning your
-                      business and building the best application to fit your
-                      needs. We work with you to create real, durable solutions
-                      that cut down on time waste and save you money.
-                    </p>
+                    <img class="image featured" src="images/thumbs/kit-think-tank-mayor.jpg" alt="" />
+                    <h3>Who Adapts To Your Needs</h3>
+                    <p>It's not enough today to just be great at creating
+                    software. Technologies come and go. Our expertise is
+                    learning your business and identifying the best solution to
+                    fit your needs. We work with you to create real, durable
+                    solutions that cut down on waste and save you money.</p>
                   </section>
-
               </div>
               <div class="col-xs-4">
-
-                  <section class="box feature">
-                    <img class="image featured" src="images/pic04.png" alt="" />
-                    <h3>In Innovative Ways.</h3>
-                    <p>
-                      Building software is about more than writing code. We help
-                      you reimagine your business entirely. Software isn't just
-                      automation; it is also improvement and simplicity.
-                    </p>
-                  </section>
-
+                <section class="box feature">
+                  <img class="image featured" src="images/thumbs/kit-electric-bookworm-hackathon.jpg" alt="" />
+                  <h3>In Innovative Ways.</h3>
+                  <p>
+                    Building software is about more than writing code. We help
+                    you achieve your target margins and save the bottom line.
+                    Software isn't just automation; it is also improvement and
+                    simplicity.
+                  </p>
+                </section>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12">
                 <ul class="actions">
-                  <li><a ng-click="scrollToContact()" class="button big"><i
+                  <li><a onClick="scrollToContact()" class="button big"><i
                       class="fa fa-thumbs-up"></i> Get your assessment today</a></li>
-                  <li><a ng-href="#/consulting" class="button big"><i class="fa
+                  <li><a href="/testimonials.shtml" class="button big"><i class="fa
                       fa-users"></i> See who we've helped</a></li>
                 </ul>
               </div>
@@ -192,3 +186,4 @@
     </div>
   </div>
 </div>
+<script src="scripts/home.js"></script>

@@ -129,6 +129,12 @@
     {
     }
 
+      ul.menu li:first-child
+      {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
       ul.menu li
       {
         display: block;
@@ -432,51 +438,11 @@
         background-color: #a1cd9b;
       }
 
-  #navPanel
-  {
-    background-color:   #353c37;
-    background-image:   url('../images/overlay.png'),    -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5));
-    background-image:   url('../images/overlay.png'),    -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5));
-    background-image:   url('../images/overlay.png'),    -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5));
-    background-image:   url('../images/overlay.png'),    -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5));
-    background-image:   url('../images/overlay.png'),    linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5));
-    background-repeat:    repeat,             no-repeat;
-    background-size:    auto,             100% 100%;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    box-shadow: inset -3px 0px 10px 0px rgba(0,0,0,0.25);
+  #navbar-phone {
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    position: fixed;
+    right: 90px;
+    top: 12px;
   }
-
-    #navPanel nav
-    {
-      position: relative;
-      z-index: 1000;
-    }
-
-    #navPanel .link
-    {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-      height: 44px;
-      line-height: 44px;
-      padding: 0 1em 0 1em;
-      color: #888;
-      color: rgba(255,255,255,0.5);
-      border-top: solid 2px rgba(87, 93, 89, 0.15);
-    }
-
-      #navPanel .link:first-child
-      {
-        border-top: 0;
-      }
-
-      #navPanel .indent-1 { display: inline-block; width: 1em; }
-      #navPanel .indent-2 { display: inline-block; width: 2em; }
-      #navPanel .indent-3 { display: inline-block; width: 3em; }
-      #navPanel .indent-4 { display: inline-block; width: 4em; }
-      #navPanel .indent-5 { display: inline-block; width: 5em; }
-      #navPanel .depth-0 { color: #fff; }
 }

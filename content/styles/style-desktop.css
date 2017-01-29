@@ -287,6 +287,10 @@
     cursor: default;
   }
 
+  #navbar-phone {
+    display: none;
+  }
+
     #nav ul
     {
       position: relative;
@@ -466,5 +470,15 @@
   #copyright
   {
     margin: 4em 0 0 0;
+  }
+}
+
+@media(min-width: 900px) {
+  #navbar-phone {
+    display: block;
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    position: fixed;
+    right: 30px;
   }
 }
