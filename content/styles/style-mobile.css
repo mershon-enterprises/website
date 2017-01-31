@@ -279,13 +279,13 @@
     padding: 9em 0 5em 0;
   }
 
-  #main-wrapper
+  .main-wrapper
   {
     border-top-width: 0px;
     border-bottom-width: 5px;
   }
 
-    .homepage #main-wrapper
+    .homepage .main-wrapper
     {
       border-top-width: 15px;
     }
