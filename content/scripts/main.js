@@ -11,6 +11,7 @@ $(document).ready(function() {
     apiKey:    "API_KEY"
   });
 
+  // contact form
   window.doContact = function() {
     var data = {
       name:               $("#contact-form input[name='name']").val(),
@@ -32,7 +33,27 @@ $(document).ready(function() {
         alert('Uh oh! The mail didn\'t send.', 'We\'ll get it fixed as soon as possible!', 'error');
       }
     );
+    return false;
+  };
 
+  window.getSampleContract = function() {
+    var data = {
+      sampleContract: true,
+      to_email_addresses: $("#sampleContractEmail").val()
+    };
+    Patchwork.callPlatformMethod({
+      platformId: 1,
+      method: "send",
+      action: "POST",
+      params: data
+    }).then(
+      function() {
+        alert("Please check your email for the sample contract document.");
+      },
+      function() {
+        alert("Apologies, we were unable to send the sample contract to your email at this time.");
+      }
+    );
     return false;
   };
 
