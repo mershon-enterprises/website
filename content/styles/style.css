@@ -987,3 +987,26 @@
         border-width: 2px;
         line-height: 1em;
       }
+
+@media(max-width:768px) {
+  .catalog-parent {
+    margin-bottom: 350px;
+  }
+}
+
+.catalog-wrapper {
+  display: inline;
+  position: absolute;
+}
+.catalog {
+  perspective: 1000px;
+}
+.catalog-inner {
+  transition: .3s;
+  transform: rotateY(-40deg);
+}
+.catalog-inner img {
+  float: left;
+  width: 300px;
+  box-shadow: -2px 0px 10px gray, 10px 0px 10px gray;
+}
