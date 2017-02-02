@@ -1008,5 +1008,5 @@
 .catalog-inner img {
   float: left;
   width: 300px;
-  box-shadow: -2px 0px 10px gray, 10px 0px 10px gray;
+  box-shadow: -2px 0px 10px #484848, 10px 0px 10px #484848;
 }
