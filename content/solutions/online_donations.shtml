@@ -1,0 +1,16 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Donations | Mershon Enterprises - A Bakersfield Software Company</title>
+
+    <!--#include virtual="../templates/header_css.html" -->
+  </head>
+  <body class="homepage">
+    <!--#include virtual="../templates/header.html" -->
+
+    <!--#include virtual="../views/solutions/online_donations.html" -->
+
+    <!--#include virtual="../templates/footer.html" -->
+  </body>
+</html>
