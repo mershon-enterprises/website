@@ -12,6 +12,8 @@
     <!--#include virtual="views/customer_portal.html" -->
 
     <!--#include virtual="templates/footer.html" -->
+    <script src="https://js.stripe.com/v2/"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
     <script src="/scripts/customer_portal.js"></script>
