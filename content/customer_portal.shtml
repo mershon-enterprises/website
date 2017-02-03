@@ -1,0 +1,19 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Customer Portal | Mershon Enterprises - A Bakersfield Software Company</title>
+
+    <!--#include virtual="templates/header_css.html" -->
+  </head>
+  <body class="homepage">
+    <!--#include virtual="templates/header.html" -->
+
+    <!--#include virtual="views/customer_portal.html" -->
+
+    <!--#include virtual="templates/footer.html" -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+    <script src="/scripts/customer_portal.js"></script>
+  </body>
+</html>

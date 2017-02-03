@@ -11,6 +11,8 @@ $(document).ready(function() {
     apiKey:    PATCHWORK_API_KEY
   });
 
+  $(document).trigger("PatchworkLoaded");
+
   // contact form
   window.doContact = function() {
     var data = {
@@ -68,6 +70,8 @@ $(document).ready(function() {
       id = "#menu-solutions"; break;
     case "/testimonials.shtml":
       id = "#menu-testimonials"; break;
+    case "/customer_portal.shtml":
+      id = "#menu-customer-portal"; break;
   }
   $(id).addClass("active");
 });
