@@ -12,5 +12,7 @@
     <!--#include virtual="/views/solutions/automatic_bill_pay.html" -->
 
     <!--#include virtual="/templates/footer.html" -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/scripts/solutions.js"></script>
   </body>
 </html>
