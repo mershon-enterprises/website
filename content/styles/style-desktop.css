@@ -473,7 +473,7 @@
   }
 }
 
-@media(min-width: 900px) {
+@media(min-width: 1130px) {
   #navbar-phone {
     display: block;
     font-size: 16pt !important;

@@ -141,6 +141,20 @@
         border: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
+        text-decoration: none;
+      }
+      #nav ul li.active a {
+        background-color: #008799 !important;
+        color: #fff;
+      }
+      .navbar-nav {
+        padding-left: 0;
+      }
+      .navbar-nav > li >a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
       }
 
   /* Box */
