@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Custom Software Development | Mershon Enterprises - A Bakersfield Software Company</title>
 
-    <!--#include virtual="../templates/header_css.html" -->
+    <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">
-    <!--#include virtual="../templates/header.html" -->
+    <!--#include virtual="/templates/header.html" -->
 
-    <!--#include virtual="../views/solutions/custom_software_development.html" -->
+    <!--#include virtual="/views/solutions/custom_software_development.html" -->
 
-    <!--#include virtual="../templates/footer.html" -->
+    <!--#include virtual="/templates/footer.html" -->
   </body>
 </html>

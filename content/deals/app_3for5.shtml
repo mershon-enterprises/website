@@ -11,13 +11,13 @@
       web development, SCADA, mobile applications, apps, programmers,
       technical, ios, android, developers, recruit, consultant">
 
-    <!--#include virtual="../templates/header_css.html" -->
+    <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">
-    <!--#include virtual="../templates/header.html" -->
+    <!--#include virtual="/templates/header.html" -->
 
-    <!--#include virtual="../views/deals/app_3for5.html" -->
+    <!--#include virtual="/views/deals/app_3for5.html" -->
 
-    <!--#include virtual="../templates/footer.html" -->
+    <!--#include virtual="/templates/footer.html" -->
   </body>
 </html>

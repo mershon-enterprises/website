@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Automatic Bill Pay | Mershon Enterprises - A Bakersfield Software Company</title>
 
-    <!--#include virtual="../templates/header_css.html" -->
+    <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">
-    <!--#include virtual="../templates/header.html" -->
+    <!--#include virtual="/templates/header.html" -->
 
-    <!--#include virtual="../views/solutions/automatic_bill_pay.html" -->
+    <!--#include virtual="/views/solutions/automatic_bill_pay.html" -->
 
-    <!--#include virtual="../templates/footer.html" -->
+    <!--#include virtual="/templates/footer.html" -->
   </body>
 </html>
