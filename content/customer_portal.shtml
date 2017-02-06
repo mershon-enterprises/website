@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Customer Portal | Mershon Enterprises - A Bakersfield Software Company</title>
 
+    <!--#include virtual="templates/header_meta.html" -->
     <!--#include virtual="templates/header_css.html" -->
   </head>
   <body class="homepage">

@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <title>Automatic Bill Pay | Mershon Enterprises - A Bakersfield Software Company</title>
 
+    <meta name=description content="Mershon Enterprises offers online automatic
+      bill pay solutions for B2C companies to help alleviate cashflow headaches.
+      Check out our simple sliding-scale pricing and free trial.">
+    <meta name=keywords content="kern, bakersfield, online, bill pay, customer
+      bill, billing, credit card, flat rate, monthly billing, bill solution,
+      website customer, customer portal, customer payment">
+    <meta property="og:title" content="Automatic Bill Pay | Mershon Enterprises" />
+    <meta property="og:description" content="Mershon Enterprises offers online automatic
+      bill pay solutions for B2C companies to help alleviate cashflow headaches.
+      Check out our simple sliding-scale pricing and free trial." />
+    <meta property="og:product" content="product" />
+    <meta property="og:product:price:amount" content="Starting at just $49/month" />
+    <meta property="og:url" content="https://mershon.enterprises/solutions/automatic_bill_pay.shtml" />
+    <meta property="og:image" content="http://staging.mershon.enterprises/images/solutions/automatic-bill-pay.jpg" />
     <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">
