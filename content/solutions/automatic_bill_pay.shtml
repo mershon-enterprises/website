@@ -17,7 +17,7 @@
     <meta property="og:product" content="product" />
     <meta property="og:product:price:amount" content="Starting at just $49/month" />
     <meta property="og:url" content="https://mershon.enterprises/solutions/automatic_bill_pay.shtml" />
-    <meta property="og:image" content="http://staging.mershon.enterprises/images/solutions/automatic-bill-pay.jpg" />
+    <meta property="og:image" content="https://mershon.enterprises/images/solutions/automatic-bill-pay.jpg" />
     <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">

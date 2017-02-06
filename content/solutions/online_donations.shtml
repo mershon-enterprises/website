@@ -19,7 +19,7 @@
     <meta property="og:product" content="product" />
     <meta property="og:product:price:amount" content="One-Time Price: $375" />
     <meta property="og:url" content="https://mershon.enterprises/solutions/online_donations.shtml" />
-    <meta property="og:image" content="http://staging.mershon.enterprises/images/solutions/donation-widgets.jpg" />
+    <meta property="og:image" content="https://mershon.enterprises/images/solutions/donation-widgets.jpg" />
     <!--#include virtual="/templates/header_css.html" -->
   </head>
   <body class="homepage">
