@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Donations | Mershon Enterprises - A Bakersfield Software Company</title>
+
+    <meta name=description content="Mershon Enterprises offers amazing
+      easy-to-use donation buttons for your non-profit. One-time or recurring
+      donations included for a single one-time low fee. Customized email
+      receipts and recurring donation reminders at no additional charge.">
+    <meta name=keywords content="kern, bakersfield, online, donation, donor
+      bill, charge, accept, credit card, flat rate, monthly donation, donation
+      solution, website donor, donor portal, donor payment">
+    <meta property="og:title" content="Online Donations | Mershon Enterprises" />
+    <meta property="og:description" content="Mershon Enterprises offers amazing
+      easy-to-use donation buttons for your non-profit. One-time or recurring
+      donations included for a single one-time low fee. Customized email
+      receipts and recurring donation reminders at no additional charge." />
+    <meta property="og:product" content="product" />
+    <meta property="og:product:price:amount" content="One-Time Price: $375" />
+    <meta property="og:url" content="https://mershon.enterprises/solutions/online_donations.shtml" />
+    <meta property="og:image" content="https://mershon.enterprises/images/solutions/donation-widgets.jpg" />
+    <!--#include virtual="/templates/header_css.html" -->
+  </head>
+  <body class="homepage">
+    <!--#include virtual="/templates/header.html" -->
+
+    <!--#include virtual="/views/solutions/online_donations.html" -->
+
+    <!--#include virtual="/templates/footer.html" -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/scripts/solutions.js"></script>
+  </body>
+</html>

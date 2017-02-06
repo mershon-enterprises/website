@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>3-for-5 Apps | Mershon Enterprises - A Bakersfield Software Company</title>
+    <meta name=description content="Mershon Enterprises LLC is a Bakersfield
+      software technology powerhouse with over 10 years of experience in web
+      application development, industrial applications (SCADA/HMI), systems
+      integration, and technical talent recruiting for all your project needs.">
+    <meta name=keywords content="software, software development, bakersfield,
+      web development, SCADA, mobile applications, apps, programmers,
+      technical, ios, android, developers, recruit, consultant">
+
+    <!--#include virtual="/templates/header_css.html" -->
+  </head>
+  <body class="homepage">
+    <!--#include virtual="/templates/header.html" -->
+
+    <!--#include virtual="/views/deals/app_3for5.html" -->
+
+    <!--#include virtual="/templates/footer.html" -->
+  </body>
+</html>
