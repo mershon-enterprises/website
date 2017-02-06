@@ -44,7 +44,7 @@ $(document).ready(function() {
       to_email_addresses: $("#sampleContractEmail").val()
     };
     Patchwork.callPlatformMethod({
-      platformId: 6,
+      platformId: PATCHWORK_EMAIL_PLATFORM_ID,
       method: "send",
       action: "POST",
       params: data
