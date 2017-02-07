@@ -1,3 +1,8 @@
+window.subscriptionBillingName = "Subscription Billing";
+if (window.location.pathname == "/solutions/automatic_bill_pay.shtml") {
+  window.subscriptionBillingName = "Automatic Bill Pay";
+}
+
 $(document).ready(function() {
   // initialize Patchwork
   Patchwork.init({
@@ -56,8 +61,8 @@ $(document).ready(function() {
         buttonId:              "buy-bill-pay-button-" + tier.amount,
         label:                 "Start Trial",
         classes:               "button btn btn-block",
-        name:                  "Automatic Bill Pay",
-        description:           "Integrated into your Website",
+        name:                  "Integrate into your website",
+        description:           window.subscriptionBillingName,
         plan:                  tier.plan,
         amount:                tier.amount,
         requireBillingAddress: true,
