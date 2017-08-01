@@ -6,19 +6,19 @@ if (window.location.pathname == "/solutions/automatic_bill_pay.shtml") {
 $(document).ready(function() {
   // initialize Patchwork
   Patchwork.init({
-    accountId: PATCHWORK_ACCOUNT_ID,
-    apiKey:    PATCHWORK_API_KEY
+    application: PATCHWORK_APPLICATION,
+    token:       PATCHWORK_TOKEN
   });
 
   // Set up Stripe Button dependency
   Patchwork.callPlatformMethod({
-    platformId: PATCHWORK_STRIPE_PLATFORM_ID,
+    platform: PATCHWORK_STRIPE_PLATFORM_UID,
     method: "button",
     action: "GET",
     params: {}
   }).then(function(responseJavascript) {
     eval(responseJavascript);
-    PatchworkStripeButton.init(PATCHWORK_STRIPE_PLATFORM_ID, function() {
+    PatchworkStripeButton.init(function() {
       alert("Please check your email for your receipt and instructions!");
     });
 

@@ -1,6 +1,6 @@
 $(document).on("PatchworkLoaded", function() {
   Patchwork.callPlatformMethod({
-    platformId: PATCHWORK_BILL_PAY_PLATFORM_ID,
+    platform: PATCHWORK_BILL_PAY_PLATFORM_UID,
     method:     "widgets",
     action:     "GET",
     params:  {

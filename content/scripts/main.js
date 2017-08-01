@@ -7,8 +7,8 @@ window.scrollToContact = function() {
 $(document).ready(function() {
   // initialize Patchwork
   Patchwork.init({
-    accountId: PATCHWORK_ACCOUNT_ID,
-    apiKey:    PATCHWORK_API_KEY
+    application: PATCHWORK_APPLICATION,
+    token:       PATCHWORK_TOKEN
   });
 
   $(document).trigger("PatchworkLoaded");
@@ -23,7 +23,7 @@ $(document).ready(function() {
       to_email_addresses: $("#contact-form input[name='email']").val()
     };
     Patchwork.callPlatformMethod({
-      platformId: PATCHWORK_EMAIL_PLATFORM_ID,
+      platform: PATCHWORK_EMAIL_PLATFORM_UID,
       method: "send",
       action: "POST",
       params: data
@@ -44,7 +44,7 @@ $(document).ready(function() {
       to_email_addresses: $("#sampleContractEmail").val()
     };
     Patchwork.callPlatformMethod({
-      platformId: PATCHWORK_EMAIL_PLATFORM_ID,
+      platform: PATCHWORK_EMAIL_PLATFORM_UID,
       method: "send",
       action: "POST",
       params: data
